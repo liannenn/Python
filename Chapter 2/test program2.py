@@ -21,3 +21,6 @@ def program2_3():
     #program 2 3
     print("Don't fear!")
     print("I'm here!")
+    
+def program2_4():
+    print('Your assignment is to read "Hamlet" by tomorrow.')
