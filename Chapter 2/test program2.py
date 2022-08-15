@@ -24,3 +24,14 @@ def program2_3():
     
 def program2_4():
     print('Your assignment is to read "Hamlet" by tomorrow.')
+    
+def program2_5():
+    #This function displays a person's name and address
+    print('Kate Austen')
+    print('123 Full Circle Drive')
+    print('Asheville, NC 28899')
+    
+def program2_6():
+    print('Kate Austen') #Display the Name
+    print('123 Full Circle Drive') #Display the address
+    print('Asheville, NC 28899') #Display the city, state, and ZIP
