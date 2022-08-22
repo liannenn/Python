@@ -57,16 +57,20 @@ def temp_convertor():
 def cookie_monster():
     amt_of_cookies = float(input("How many cookies do you want to make? ")) #Amt of cookies 
     print("For", amt_of_cookies,"cookies you will need:") #
-    converted_amt = (amt_of_cookies/24)
-    sugar1 = (1.5*converted_amt)
-    butter1 = (1* converted_amt)
-    flour1 = (2.75* converted_amt)
     
-    sugar2 = (.5* converted_amt)
-    butter2 = (.3333*converted_amt)
-    flour2 = (.9166*converted_amt)
+    
+    sugar1 = (1.5*amt_of_cookies)
+    butter1 = (1*amt_of_cookies)
+    flour1 = (2.75*amt_of_cookies)
+    
+    sugar2 = (.5*amt_of_cookies)
+    butter2 = (.3333*amt_of_cookies)
+    flour2 = (.9166*amt_of_cookies)
     
     print(sugar1, "cup(s) ", sugar2, "ounces of sugar.")
     print(butter1, "cup(s) ", butter2, "ounces of butter.")
     print(flour1, "cup(s) ", flour2, "ounces of flour.")
+    
+def class_demoprahpics():
+    
     
