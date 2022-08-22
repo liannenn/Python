@@ -33,19 +33,40 @@ def sales_tax():
     county_tax = (purchase_price * 0.025)
     total_tax = (state_tax + county_tax)
     total_sale = (total_tax+sale_amt)
-    print(format("Your state tax amount is:\t$\t", state_tax,'10.2f'))#Print state tax amt
-    print(format("Your county tax amount is:\t$\t", county_tax,'10.2f'))  #Print county tax amt
-    print(format("Your total tax is:\t\t$\t", total_tax,'10.2f'))  #Print total tax amt
-    print(format("Your total sale is:\t\t$\t", total_sale,'10.2f'))  #Print total sale amt
+    print("Your state tax amount is:\t$\t", format(state_tax,'10.2f'))#Print state tax amt
+    print("Your county tax amount is:\t$\t", format(county_tax,'10.2f'))  #Print county tax amt
+    print("Your total tax is:\t\t$\t", format(total_tax,'10.2f'))  #Print total tax amt
+    print("Your total sale is:\t\t$\t", format(total_sale,'10.2f'))  #Print total sale amt
     
 def tip_tax_total():
     sale_amt = float(input("Please enter the sale amount: "))
     print("The sale was:\t\t\t$", sale_amt)
     tip_amt = (sale_amt*0.18)
-    print("The tip amount is:\t\t$") print(format(tip_amt, '7.2f'))
+    print("The tip amount is:\t\t$",tip_amt)
     sales_tax2 = (sale_amt*0.07)
-    print("The sales tax amount is: \t$", sales_tax2)
-    total_bill = (tip_amt + sale_amt + sales_tax2)
-    print("The total bill is: \t\t$", total_bill)
+    total_bill = (tip_amt+sale_amt+sales_tax2)
+    sales_tax2 = format(sales_tax2, '.2f') # 
+    print("The sales tax amount is: \t$", sales_tax2) # Print sales tax
+    print("The total bill is: \t\t$", total_bill) # Print total bill
     
+def temp_convertor():
+    Celsius = float(input('Please enter the degrees in Celusis: ')) #Get temp in celsius
+    F = 1.8 * float(Celsius) + 32
+    print(Celsius, 'degrees celsuis is', F, 'degrees in fahrenheit.')
+    
+def cookie_monster():
+    amt_of_cookies = float(input("How many cookies do you want to make? ")) #Amt of cookies 
+    print("For", amt_of_cookies,"cookies you will need:") #
+    converted_amt = (amt_of_cookies/24)
+    sugar1 = (1.5*converted_amt)
+    butter1 = (1* converted_amt)
+    flour1 = (2.75* converted_amt)
+    
+    sugar2 = (.5* converted_amt)
+    butter2 = (.3333*converted_amt)
+    flour2 = (.9166*converted_amt)
+    
+    print(sugar1, "cup(s) ", sugar2, "ounces of sugar.")
+    print(butter1, "cup(s) ", butter2, "ounces of butter.")
+    print(flour1, "cup(s) ", flour2, "ounces of flour.")
     
