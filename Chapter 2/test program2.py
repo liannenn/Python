@@ -38,12 +38,11 @@ def program2_6():
     print('123 Full Circle Drive') #Display the address
     print('Asheville, NC 28899') #Display the city, state, and ZIP
     
-    def get_average():
+def get_average():
     #Assign a variable to the three test scores
     first_score = float(input('Enter the first test score:'))
     second_score = float(input('Enter the first test score:'))
     third_score = float(input('Enter the first test score:'))
-    avg_score = (first_score + second_score + third_score)/3
     #Add up the scores and divide by 3
     
     #Output the avg
@@ -61,21 +60,21 @@ def program2_17():
     
 def program2_18():
     
-     f = float(input('Enter the desired future value:')) #Get desired value
-     r = float(input('Enter the annual interest rate:')) #Get annual interest rate
-     n = float(input('Enter the number of years they money will grow:')) #Get amt of years
-     p = float(input('You will need to deposit: ')) #Give amt needed to deposit
-     answer = f / (1 + r)**n #Get answer
-     print('You will need to deposit ', end='$')
-     print (format(answer, ".2f")) #Print answer
+    f = float(input('Enter the desired future value:')) #Get desired value
+    r = float(input('Enter the annual interest rate:')) #Get annual interest rate
+    n = float(input('Enter the number of years they money will grow:')) #Get amt of years
+    p = float(input('You will need to deposit: ')) #Give amt needed to deposit
+    answer = f / (1 + r)**n #Get answer
+    print('You will need to deposit ', end='$')
+    print (format(answer, ".2f")) #Print answer
      
 def program2_19():
-     amount_due= 5000.0 #Amt due
-     monthly_payment = amount_due/ 12.0 #Get monthly payment
-     print('The monthly payment is ', end='$') #Print monthly payment with $ sign
-     print(format(monthly_payment, '.2f'))
+    amount_due= 5000.0 #Amt due
+    monthly_payment = amount_due/ 12.0 #Get monthly payment
+    print('The monthly payment is ', end='$') #Print monthly payment with $ sign
+    print(format(monthly_payment, '.2f'))
      
-     def program2_22():
+def program2_22():
     numb1 = 127.90
     numb2 = 3465.15
     numb3 = 3.78
@@ -90,4 +89,5 @@ def program2_19():
     print(format(numb5, '7.2f'))
     print(format(numb6, '7.2f'))
     
+
     
