@@ -1,8 +1,8 @@
 def personal_info():
-    print("Jullian Tran")
-    print("13812, Wichita, KS, 67235")
-    print("316-993-1411")
-    print("IT")
+    print("Jullian Tran") #print name
+    print("13812, Wichita, KS, 67235") #print address
+    print("316-993-1411") #print phone number
+    print("IT") #print career
     
 def total_purchase():
     item_1 = float(input('Please enter a price for your first item:')) #Get first item
@@ -19,9 +19,9 @@ def total_purchase():
     
 def distance_traveled():
     speed = float(input('How fast are you driving?')) #Get speed
-    mph1 = (speed*6)
-    mph2 = (speed*10)
-    mph3 = (speed*15)
+    mph1 = (speed*6) #calc speed per 6 hours
+    mph2 = (speed*10) #calc speed per 10 hours
+    mph3 = (speed*15) #calc speed per 15 hours
     print('At', speed, "miles per hour you will travel", mph1," miles in 6 hours.")  #Print mph1
     print('At', speed, "miles per hour you will travel", mph2," miles in 10 hours.")  #Print mph2
     print('At', speed, "miles per hour you will travel", mph3," miles in 15 hours.")  #Print mph3
@@ -29,10 +29,10 @@ def distance_traveled():
 def sales_tax():
     sale_amt = float(input('Please enter the sale amount: ')) #Get sale amt + print it
     purchase_price = float(input('Your purchase price was:        $        ')) #Get sale amt + print it
-    state_tax = (purchase_price * 0.05)
-    county_tax = (purchase_price * 0.025)
-    total_tax = (state_tax + county_tax)
-    total_sale = (total_tax+sale_amt)
+    state_tax = (purchase_price * 0.05) #calc state tax
+    county_tax = (purchase_price * 0.025) #calc county tax
+    total_tax = (state_tax + county_tax)#calc total tax
+    total_sale = (total_tax+sale_amt) #calc the total sale
     print("Your state tax amount is:\t$\t", format(state_tax,'10.2f'))#Print state tax amt
     print("Your county tax amount is:\t$\t", format(county_tax,'10.2f'))  #Print county tax amt
     print("Your total tax is:\t\t$\t", format(total_tax,'10.2f'))  #Print total tax amt
@@ -56,21 +56,35 @@ def temp_convertor():
     
 def cookie_monster():
     amt_of_cookies = float(input("How many cookies do you want to make? ")) #Amt of cookies 
-    print("For", amt_of_cookies,"cookies you will need:") #
+    print("For", amt_of_cookies,"cookies you will need:") #get amt of cookies
     
     
-    sugar1 = (1.5*amt_of_cookies)
-    butter1 = (1*amt_of_cookies)
-    flour1 = (2.75*amt_of_cookies)
+    orig_sugar=1.5
+    orig_butter= 1
+    orig_flour= 2.75
+
+    sugar_cups = (amt_of_cookies * .5)//8 
+
+    sugar_oz = (amt_of_cookies * .5)%8
     
-    sugar2 = (.5*amt_of_cookies)
-    butter2 = (.3333*amt_of_cookies)
-    flour2 = (.9166*amt_of_cookies)
+    sugar_oz = format(sugar_oz, '.2f')
+
+    butter_cups = (amt_of_cookies * .3333)//8
+
+    butter_oz = (amt_of_cookies * .3333)%8
     
-    print(sugar1, "cup(s) ", sugar2, "ounces of sugar.")
-    print(butter1, "cup(s) ", butter2, "ounces of butter.")
-    print(flour1, "cup(s) ", flour2, "ounces of flour.")
+    butter_oz = format(butter_oz, '.2f')
+
+    flour_cups = (amt_of_cookies * .9166)//8
+
+    flour_oz = (amt_of_cookies * .9166)%8
     
-def class_demoprahpics():
+    flour_oz = format(flour_oz, '.2f')
+
+    print(sugar_cups, "cup(s) ", sugar_oz, "ounces of sugar.")
+    print(butter_cups, "cup(s) ", butter_oz, "ounces of butter.")
+    print(flour_cups, "cup(s) ", flour_oz, "ounces of flour.")
     
+def class_demopraphics():
+    amt_of_cookies = float(input("How many cookies do you want to make? ")) #Amt of cookies9
     
