@@ -63,28 +63,51 @@ def cookie_monster():
     orig_butter= 1
     orig_flour= 2.75
 
-    sugar_cups = (amt_of_cookies * .5)//8 
+    sugar_cups = (amt_of_cookies * .5)//8 #Calc sugar cups
 
-    sugar_oz = (amt_of_cookies * .5)%8
+    sugar_oz = (amt_of_cookies * .5)%8 #Calc sugar oz
     
-    sugar_oz = format(sugar_oz, '.2f')
+    sugar_oz = format(sugar_oz, '.2f') #Format sugar oz
 
-    butter_cups = (amt_of_cookies * .3333)//8
+    butter_cups = (amt_of_cookies * .3333)//8 #Calc butter cups
 
-    butter_oz = (amt_of_cookies * .3333)%8
+    butter_oz = (amt_of_cookies * .3333)%8 #Calc butter oz
     
-    butter_oz = format(butter_oz, '.2f')
+    butter_oz = format(butter_oz, '.2f') #Format butter oz
 
-    flour_cups = (amt_of_cookies * .9166)//8
+    flour_cups = (amt_of_cookies * .9166)//8 #Calc flour cups
 
-    flour_oz = (amt_of_cookies * .9166)%8
+    flour_oz = (amt_of_cookies * .9166)%8 #Calc flour oz
     
-    flour_oz = format(flour_oz, '.2f')
+    flour_oz = format(flour_oz, '.2f') #Format flour oz
 
-    print(sugar_cups, "cup(s) ", sugar_oz, "ounces of sugar.")
-    print(butter_cups, "cup(s) ", butter_oz, "ounces of butter.")
-    print(flour_cups, "cup(s) ", flour_oz, "ounces of flour.")
+    print(sugar_cups, "cup(s) ", sugar_oz, "ounces of sugar.") #Print amt of sugar cups and remaining ounces
+    print(butter_cups, "cup(s) ", butter_oz, "ounces of butter.") #Print amt of butter cups and remaining ounces
+    print(flour_cups, "cup(s) ", flour_oz, "ounces of flour.") #Print amt of flour cups and remaining ounces
     
 def class_demopraphics():
-    amt_of_cookies = float(input("How many cookies do you want to make? ")) #Amt of cookies9
+    amt_of_females= float(input("Enter the number of females:")) #Get amt of females
+    amt_of_males= float(input("Enter the number of males:")) #Get amt of males
+    
+    total_ppl= amt_of_females + amt_of_males #Gather total people
+    
+    female_perc= (amt_of_females/total_ppl) #Calc female amt
+    male_perc= (amt_of_males/total_ppl) #Calc male amt
+    
+    females = (female_perc*100) #Multiply to get percent
+    males = (male_perc*100) #Multiply to get percent
+    
+    femaless =format(females, '.2f') # Format 
+    maless =format(males, '.2f') # Format
+    
+    print("The class consists of ", femaless ,"% females and", maless , "% males.") # Print the amount
+    
+def  tortuga_1():
+    import turtle
+    
+    
+def  tortuga_2():
+    import turtle
+    
+    
     
