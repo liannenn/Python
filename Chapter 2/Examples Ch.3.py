@@ -92,7 +92,7 @@ def range_of_numbers():
     #and output if the number is out of range
     
     #Get input from the user
-    number = input("Enter a number from 1 to 10: ")
+    number = int(input("Enter a number from 1 to 10: "))
     
     #Check if the number is greater than 10
     if number > 10:
@@ -113,3 +113,41 @@ def loan_qualifier():
             print("You must have been on your current job for at least 2 years to qualify.")
     else:
         print("You must earn at least $30,000 per year to qualify.")
+        
+def grader():
+    test_score = int(input("Enter your test score: "))
+    if test_score >= 90:
+        print("Your letter grade is A.")
+    else:
+        if test_score >=80:
+            print("Your letter grade is B.")
+        else:
+            if test_score >=80:
+                print("Your letter grade is C.")
+            else:
+                if test_score >=60:
+                    print("Your letter grade is D.")
+                else:
+                    if test_score >=60:
+                        print("Your letter grade is F.")
+                        
+def loan_qualifier_v2():
+    annual_salary = int(input("Enter your annual salary: "))
+    years_at_job = int(input("Enter the number of years at your current job: "))
+    if annual_salary >= 30000 and years_at_job >= 2:
+        print("You qualify.")
+    else:
+        print("You do not qualify for the loan")
+        
+def loan_qualifier_v3():
+    annual_salary = int(input("Enter your annual salary: "))
+    years_at_job = int(input("Enter the number of years at your current job: "))
+    if annual_salary >= 30000 or years_at_job >= 2:
+        print("You qualify.")
+    else:
+        print("You do not qualify for the loan")
+   
+    
+        
+
+
