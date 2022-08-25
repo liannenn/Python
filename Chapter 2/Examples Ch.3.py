@@ -1,3 +1,58 @@
+import turtle
+
+def turtleprog1():
+    turtle.left(45)
+    turtle.forward(100)
+    if turtle.ycor() > 0 and turtle.ycor() > 0:
+        if turtle.ycor() > 50 and turtle.ycor() > 50:
+            print("yes")
+        else:
+            print("nope")
+    
+def turtleprog2():
+    SCREEN_WIDTH = 600
+    SCREEN_HEIGHT = 600
+    TARGET_LLEFT_X = 150
+    TARGET_LLEFT_Y = 250
+    TARGET_WIDTH = 25
+    FORCE_FACTOR = 30
+    PROJECTILE_SPEED = 1
+    NORTH = 90
+    SOUTH = 270
+    EAST = 0
+    WEST = 180
+    
+    #make my target
+    turtle.penup()
+    turtle.goto( TARGET_LLEFT_X, TARGET_LLEFT_Y)
+    turtle.pendown()
+    turtle.setheading(EAST)
+    turtle.forward(TARGET_WIDTH)
+    turtle.setheading(SOUTH)
+    turtle.forward(TARGET_WIDTH)
+    turtle.setheading(WEST)
+    turtle.forward(TARGET_WIDTH)
+    turtle.setheading(NORTH)
+    turtle.forward(TARGET_WIDTH)
+    turtle.penup()
+    
+    #set turtle up
+    turtle.goto( 0, 0)
+    turtle.setheading (EAST)
+    turtle.showturtle()
+    turtle.speed(PROJECTILE_SPEED)
+    
+    #turtle angle, force
+    angle = float(input("Enter the projectile's angle:"))
+    force = float(input("Enter the launch force (1-10):"))
+    
+    distance = force * FORCE_FACTOR # calculate
+    
+    turtle.setheading(angle)
+    turtle.forward(distance)
+    
+    
+    
 def demo_prog():
 
     value = int(input('Enter a value: '))
@@ -6,20 +61,20 @@ def demo_prog():
     #see if the value is == the mystery number
     if value == mystery_number:
         print("The values match")
-    print('Have a nice day')
+    print("Have a nice day")
     
 def demo_prog2():
-    truth = bool(input('True or False: '))
+    truth = bool(input("True or False: "))
     flag_var = True
     flag_var = False
     #see if the value is == the mystery number
     if flag_var:
-        print('True!')
+        print("True!")
     else:
-        print('False!')
+        print("False!")
         
 def test_average():
-    test_amt1 = float(input('Enter the first test score: ')) # Get first test score
+    test_amt1 = float(input("Enter the first test score: ")) # Get first test score
     test_amt2 = float(input('Enter the second test score: ')) # Get second test score
     test_amt3 = float(input('Enter the third test score: ')) # Get third test score
     
@@ -147,7 +202,3 @@ def loan_qualifier_v3():
     else:
         print("You do not qualify for the loan")
    
-    
-        
-
-
