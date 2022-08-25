@@ -104,10 +104,83 @@ def class_demopraphics():
     
 def  tortuga_1():
     import turtle
-    
+    turtle.penup()
+    turtle.goto( -140, 40)
+    turtle.showturtle()
+    turtle.pendown()
+    turtle.color("blue")
+    turtle.circle(50)
+    turtle.penup()
+
+    turtle.goto( -80, -20)
+    turtle.pendown()
+    turtle.color("yellow")
+    turtle.circle(50)
+    turtle.penup()
+
+    turtle.goto( -20, 40)
+    turtle.pendown()
+    turtle.color("black")
+    turtle.circle(50)
+    turtle.penup()
+
+    turtle.goto( 40, -20)
+    turtle.pendown()
+    turtle.color("green")
+    turtle.circle(50)
+    turtle.penup()
+
+    turtle.goto( 100, 40)
+    turtle.pendown()
+    turtle.color("red")
+    turtle.circle(50)
+    turtle.penup()
+    turtle.hideturtle()
+
     
 def  tortuga_2():
-    import turtle
-    
-    
-    
+    turtle.penup()
+    turtle.goto( 0, 0)
+    turtle.pendown()
+    turtle.forward(100)
+    turtle.penup()
+    turtle.forward(20)
+    turtle.write("E")
+    turtle.goto( 0, 0)
+    turtle.pendown()
+    turtle.forward(-100)
+    turtle.penup()
+    turtle.forward(-20)
+    turtle.write("W")
+
+    turtle.goto( 0,0)
+    turtle.right(90)
+    turtle.pendown()
+    turtle.forward(100)
+    turtle.penup()
+    turtle.forward(20)
+    turtle.write("S")
+    turtle.penup()
+    turtle.goto( 0, 0)
+    turtle.pendown()
+    turtle.forward(-100)
+    turtle.penup()
+    turtle.forward(-20)
+    turtle.pendown()
+    turtle.write("N")
+
+    turtle.penup()
+    turtle.goto( 0, 0)
+    turtle.pendown()
+    turtle.right(45)
+    turtle.forward(50)
+    turtle.forward(-100)
+
+    turtle.penup()
+    turtle.goto( 0, 0)
+    turtle.pendown()
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.forward(-100)
+    turtle.hideturtle()
+
