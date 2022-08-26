@@ -1,32 +1,34 @@
+import turtle
+
 def turtle1():
     import turtle
     turtle.penup()
     turtle.goto(-70,200)
     turtle.dot()
-    turtle.write(‘Betelgeuse’)
+    turtle.write('Betelgeuse')
     turtle.pendown()
     turtle.goto(-40,-20)
     turtle.dot()
-    turtle.write(‘Alnitka’)
+    turtle.write('Alnitka')
     turtle.goto(-90,-180)
     turtle.dot()
-    turtle.write(‘Saiph’)
+    turtle.write('Saiph')
     turtle.penup()
     turtle.goto(-40,-20)
     turtle.pendown()
     turtle.goto(0,0)
     turtle.dot()
-    turtle.write(‘Alnitam’)
+    turtle.write('Alnitam')
     turtle.goto(40,20)
     turtle.dot()
-    turtle.write(‘Mintaka’)
+    turtle.write('Mintaka')
     turtle.goto(80,100)
     turtle.dot()
-    turtle.write(‘Meissa’)
+    turtle.write('Meissa')
     turtle.goto(40,20)
     turtle.goto(120,-140)
     turtle.dot()
-    turtle.write(‘Rigel’)
+    turtle.write('Rigel')
     turtle.done()
 
 
@@ -135,7 +137,7 @@ def class_demopraphics():
     
     print("The class consists of ", femaless ,"% females and", maless , "% males.") # Print the amount
     
-def  tortuga_1():
+def tortuga_1():
     turtle.penup()
     turtle.goto( -140, 40)
     turtle.showturtle()

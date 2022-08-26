@@ -51,6 +51,8 @@ def turtleprog2():
     turtle.setheading(angle)
     turtle.forward(distance)
     
+    else:
+        print("You missed the target.")
     
     
 def demo_prog():
