@@ -123,4 +123,6 @@ def roman_numerals():
                                             print("X.")
                                         else:
                                             print("Error.")
+                                            
+def color_mixer():
                                               
