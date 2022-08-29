@@ -131,8 +131,7 @@ def color_mixer():
     if (colorinp == "red" or colorinp =="blue" or colorinp =="yellow" and
         colorinp2 == "red" or colorinp2 =="blue" or colorinp2 =="yellow"):
         print("Your color selections are good...")
-    #    if colorinp2 == "red" or colorinp == "blue" or colorinp =="yellow": # cont program if primary color is given
-        
+   
         if ( colorinp2 == "blue" and  colorinp == "red" or colorinp2 == "red" and colorinp == "blue" ):
             print("Your color is: purple.") # print if purple
                 
@@ -143,3 +142,12 @@ def color_mixer():
             print("Your color is: green.")    # print if green
     else:
         print("Error.") #print error if primary color isnt given
+
+def hot_dog():
+    
+    hotdog_pack = 10
+    hotdogbun = 8
+    
+    amt_of_ppl = input(("Amount of people attending: "))
+    amt_of_hotdogs = input(("Amount of hotdogs per person: "))
+    amt_of_ppl
