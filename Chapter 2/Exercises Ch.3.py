@@ -92,37 +92,51 @@ def roman_numerals():
     IX=9
     X=10
     
-    if answer == I: # print lunes
+    if answer == I: # print I
         print("I.")
-    else: # print martes
+    else: # print II
         if answer ==II:
             print("II.")
-        else: #  print miércoles
+        else: #  print III
             if answer ==III:
                 print("III.")
-            else: # print jueves
+            else: # print IV
                 if answer ==IV:
                     print("IV.")
-                else: # print viernes
+                else: # print V
                     if answer ==V:
                         print("V.")
-                    else: # print sábado
+                    else: # print VI
                         if answer ==VI:
                             print("VI.")
-                        else: # print  domingo
+                        else: # print  VII
                             if answer ==VII:
                                 print("VII.")
-                            else: # print  domingo
+                            else: # print  VIII
                                 if answer ==VIII:
                                     print("VIII.")
-                                else: # print  domingo
+                                else: # print  IX
                                     if answer ==IX:
                                         print("IX.")
-                                    else: # print  domingo
+                                    else: # print  X
                                         if answer ==X:
                                             print("X.")
-                                        else:
+                                        else: # print error
                                             print("Error.")
                                             
 def color_mixer():
-                                              
+    
+    colorinp = input("Choose a primary color: ") #Get 1st desired color
+    colorinp2 = input("Choose a 2nd primary color: ") #Get 2nd desired color
+    if (colorinp == "red" or colorinp =="blue" or colorinp =="yellow" and
+        colorinp2 == "red" or colorinp2 =="blue" or colorinp2 =="yellow"):
+        if colorinp2 == "red" or colorinp == "blue" or colorinp =="yellow": # cont program if primary color is given
+            if (colorinp2 == "red" and  colorinp == "blue" or
+            colorinp2 == "blue" and colorinp == "red"):
+                    print("Your color is: purple.")
+                    if (colorinp2 == "red" and  colorinp == "yellow" or colorinp2 == "yellow" and colorinp == "red"):
+                            print("Your color is: orange.")
+                    if (colorinp2 == "blue" and  colorinp == "yellow" or colorinp2 == "yellow" and colorinp == "blue"):
+                        print("Your color is: green.")      
+    else:
+        print("Error.") #print error if primary color isnt given
