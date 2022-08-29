@@ -130,13 +130,16 @@ def color_mixer():
     colorinp2 = input("Choose a 2nd primary color: ") #Get 2nd desired color
     if (colorinp == "red" or colorinp =="blue" or colorinp =="yellow" and
         colorinp2 == "red" or colorinp2 =="blue" or colorinp2 =="yellow"):
-        if colorinp2 == "red" or colorinp == "blue" or colorinp =="yellow": # cont program if primary color is given
-            if (colorinp2 == "red" and  colorinp == "blue" or
-            colorinp2 == "blue" and colorinp == "red"):
-                    print("Your color is: purple.")
-                    if (colorinp2 == "red" and  colorinp == "yellow" or colorinp2 == "yellow" and colorinp == "red"):
-                            print("Your color is: orange.")
-                    if (colorinp2 == "blue" and  colorinp == "yellow" or colorinp2 == "yellow" and colorinp == "blue"):
-                        print("Your color is: green.")      
+        print("Your color selections are good...")
+    #    if colorinp2 == "red" or colorinp == "blue" or colorinp =="yellow": # cont program if primary color is given
+        
+        if ( colorinp2 == "blue" and  colorinp == "red" or colorinp2 == "red" and colorinp == "blue" ):
+            print("Your color is: purple.") # print if purple
+                
+        if ( colorinp2 == "red" and  colorinp == "yellow" or colorinp2 == "yellow" and colorinp == "red" ):
+            print("Your color is: orange.") # print if orange
+                
+        if ( colorinp2 == "yellow" and  colorinp == "blue" or colorinp2 == "blue" and colorinp == "yellow" ):
+            print("Your color is: green.")    # print if green
     else:
         print("Error.") #print error if primary color isnt given
