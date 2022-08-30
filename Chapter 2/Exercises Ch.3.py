@@ -164,27 +164,31 @@ def hot_dog():
     
 def time_calculator():
     
-    amt_of_seconds = int(input("Amount of seconds: ")) # get the amunt of seconds needed
+    amt_of_seconds = int(input("Amount of seconds: ")) # get the amount of seconds needed
     
-    if amt_of_seconds >= 60: # determine whether or not to use the if
+    if amt_of_seconds >= 60 and amt_of_seconds <= 3600: # determine whether or not to use the if
         calc_min = amt_of_seconds / 60 # divide for number of minutes
+        min_sec = amt_of_seconds % 1 # find the remaining seconds
         calc_min2 = format(calc_min, '.0f') # format for no decimals
-        min_sec = amt_of_seconds % 60 # find the remaining seconds
-        print("There are", calc_min2, "minutes and", min_sec, "seconds.") # print the minutes and seconds
+        print("There are", calc_min2, "minute(s) and", min_sec, "second(s).") # print the minutes and seconds
         
-    if amt_of_seconds >= 3600: # determine whether or not to use the if
+    if amt_of_seconds >= 3600 and amt_of_seconds <= 86400: # determine whether or not to use the if
         calc_hour = amt_of_seconds / 3600 # divide to find the amount of hours
+        hour_rem = calc_hour % 60 # find the remaining hours
+        hour_sec = hour_rem % 1 # find the reminaining seconds
         calc_hour2 = format(calc_hour, '.0f') # format for no decimal places
-        hour_rem = amt_of_seconds % 3600 # find the remaining hours
-        hour_sec = hour_rem % 3600 # find the reminaining seconds
-        print("There are", calc_hour2 , "hours,", hour_rem , "minutes and,", hour_sec , "seconds.")
+        hour_rem2 = format(hour_rem, '.0f') # find the remaining hours
+        print("There are", calc_hour2 , "hour(s),", hour_rem2 , "minute(s) and,", hour_sec , "second(s).")
     
     if amt_of_seconds >= 86400: # determine whether or not to use the if
         calc_days = amt_of_seconds / 86400 # divide to find the amount of days
+        day_hours = calc_days % 86400 # find the remaining hours
+        day_min = day_hours % 3600 # find the reminaining minutes
+        day_sec = day_min % 60
         calc_days2 = format(calc_days, '.0f') # format for no decimal places
-        day_hours = amt_of_seconds % 86400 # find the remaining hours
-        day_min = hour_rem % 86400 # find the reminaining minutes
-        day_sec = day_min % 86400
-        print("There are", calc_days2 , "days,", day_hours , "hours,", day_min , "minutes and,", day_sec ,"seconds.")
+        print("There are", calc_days2 , "day(s),", day_hours , "hour(s),", day_min , "minute(s) and,", day_sec ,"second(s).")
+        
     
+def leap_year():
+    year = int(input("Please enter a year: ")) # get the year
     
