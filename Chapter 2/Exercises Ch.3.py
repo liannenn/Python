@@ -148,6 +148,43 @@ def hot_dog():
     hotdog_pack = 10
     hotdogbun = 8
     
-    amt_of_ppl = input(("Amount of people attending: "))
-    amt_of_hotdogs = input(("Amount of hotdogs per person: "))
-    amt_of_ppl
+    amt_of_ppl = int(input("Amount of people attending: ")) # get amt of people attending
+    amt_of_hotdogs = int(input("Amount of hotdogs per person: ")) #get amt of hotdogs per person
+    
+    hotdogs = (amt_of_ppl*amt_of_hotdogs) # calc amt of hotdogs needed
+    
+    amtofhotdogs = (hotdogs/hotdog_pack) # calc amt of hot dog packs needed
+    amtofhotdogs2 = (hotdogs%hotdog_pack) # calc amt of extra hot dogs
+    
+    amtofbuns = (hotdogs/hotdogbun) # calc amt of bun packs needed
+    amtofbuns2 = (hotdogs%hotdogbun) # calc amt of extra buns
+    
+    print("You will need", amtofhotdogs, "pack(s) and", amtofhotdogs2, "remaining.")
+    print("You will need", amtofbuns, "pack(s) and", amtofbuns2, "remaining.")
+    
+def time_calculator():
+    
+    amt_of_seconds = int(input("Amount of seconds: ")) # get the amunt of seconds needed
+    
+    if amt_of_seconds >= 60: # determine whether or not to use the if
+        calc_min = amt_of_seconds / 60 # divide for number of minutes
+        calc_min2 = format(calc_min, '.0f') # format for no decimals
+        min_sec = amt_of_seconds % 60 # find the remaining seconds
+        print("There are", calc_min2, "minutes and", min_sec, "seconds.") # print the minutes and seconds
+        
+    if amt_of_seconds >= 3600: # determine whether or not to use the if
+        calc_hour = amt_of_seconds / 3600 # divide to find the amount of hours
+        calc_hour2 = format(calc_hour, '.0f') # format for no decimal places
+        hour_rem = amt_of_seconds % 3600 # find the remaining hours
+        hour_sec = hour_rem % 3600 # find the reminaining seconds
+        print("There are", calc_hour2 , "hours,", hour_rem , "minutes and,", hour_sec , "seconds.")
+    
+    if amt_of_seconds >= 86400: # determine whether or not to use the if
+        calc_days = amt_of_seconds / 86400 # divide to find the amount of days
+        calc_days2 = format(calc_days, '.0f') # format for no decimal places
+        day_hours = amt_of_seconds % 86400 # find the remaining hours
+        day_min = hour_rem % 86400 # find the reminaining minutes
+        day_sec = day_min % 86400
+        print("There are", calc_days2 , "days,", day_hours , "hours,", day_min , "minutes and,", day_sec ,"seconds.")
+    
+    
