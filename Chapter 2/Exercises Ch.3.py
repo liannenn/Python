@@ -192,3 +192,28 @@ def time_calculator():
 def leap_year():
     year = int(input("Please enter a year: ")) # get the year
     
+def sir_fix_alot():
+    n = 1
+    first = input("Reboot computer and try to connect. (y/n):")
+    
+    
+    if first == 1:
+        second = input("Reboot router and try to connect. (y/n):")
+            
+            
+        if second == 1:
+            third = input("Verify cables are are firmly attached. (y/n):")
+                
+            
+            if third == 1:
+                fourth = input("Move router to better location. (y/n):")
+                    
+                    
+                if fourth == 1:
+                    fifth = input ("Get a new router. (y/n):")
+                        
+                    if fifth ==1:
+                        print ("Get a new router.")
+                    
+        else:
+            print("Netflix and Chill.")
