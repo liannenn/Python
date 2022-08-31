@@ -2,8 +2,6 @@ import turtle
 
 def turtleprog2():
     #set numbers as words
-    SCREEN_WIDTH = 600
-    SCREEN_HEIGHT = 600
     TARGET_LLEFT_X = 150
     TARGET_LLEFT_Y = 250
     TARGET_WIDTH = 25
@@ -42,6 +40,14 @@ def turtleprog2():
     
     turtle.setheading(angle) # set angle turtle goes
     turtle.forward(distance) # set distance turtle goes
+    
+    if (turtle.xcor() >= TARGET_LLEFT_X and
+        turtle.xcor() <= (TARGET_LLEFT_X + TARGET_WIDTH) and
+        turtle.ycor() >= TARGET_LLEFT_Y and
+        turtle.ycor() <= (TARGET_LLEFT_Y + TARGET_WIDTH)):
+        print("Target hit!")
+    else:
+        print("You missed.")
     
 def day_convertor():
     
@@ -167,13 +173,14 @@ def time_calculator():
     amt_of_seconds = int(input("Amount of seconds: ")) # get the amount of seconds needed
     
     if amt_of_seconds >= 60 and amt_of_seconds <= 3600: # determine whether or not to use the if
-        calc_min = amt_of_seconds / 60 # divide for number of minutes
-        min_sec = amt_of_seconds % 1 # find the remaining seconds
+        calc_min = amt_of_seconds // 60 # divide for number of minutes
+        min_sec = amt_of_seconds % 60 # find the remaining seconds
         calc_min2 = format(calc_min, '.0f') # format for no decimals
         print("There are", calc_min2, "minute(s) and", min_sec, "second(s).") # print the minutes and seconds
         
     if amt_of_seconds >= 3600 and amt_of_seconds <= 86400: # determine whether or not to use the if
-        calc_hour = amt_of_seconds / 3600 # divide to find the amount of hours
+        calc_hour = amt_of_seconds // 3600 # divide to find the amount of hours
+        
         hour_rem = calc_hour % 60 # find the remaining hours
         hour_sec = hour_rem % 1 # find the reminaining seconds
         calc_hour2 = format(calc_hour, '.0f') # format for no decimal places
@@ -181,7 +188,7 @@ def time_calculator():
         print("There are", calc_hour2 , "hour(s),", hour_rem2 , "minute(s) and,", hour_sec , "second(s).")
     
     if amt_of_seconds >= 86400: # determine whether or not to use the if
-        calc_days = amt_of_seconds / 86400 # divide to find the amount of days
+        calc_days = amt_of_seconds // 86400 # divide to find the amount of days
         day_hours = calc_days % 86400 # find the remaining hours
         day_min = day_hours % 3600 # find the reminaining minutes
         day_sec = day_min % 60
@@ -191,29 +198,108 @@ def time_calculator():
     
 def leap_year():
     year = int(input("Please enter a year: ")) # get the year
+    check1_1 = year/100
+    check1_2 = year/400
+    check1_3 = year/4
+    
+    if (check1_1.is_integer()) and (check1_2.is_integer()):
+        print(year, "is a leap year. There are 29 days in the month of February.")
+    
+    if (check1_3.is_integer()):
+        print(year, "is a leap year. There are 29 days in the month of February")
+        
+    else:
+        print(year, "is not a leap year. There are 28 days in the month of February.")
     
 def sir_fix_alot():
-    n = 1
     first = input("Reboot computer and try to connect. (y/n):")
     
     
-    if first == 1:
+    if first == "n":
         second = input("Reboot router and try to connect. (y/n):")
             
             
-        if second == 1:
+        if second == "n":
             third = input("Verify cables are are firmly attached. (y/n):")
                 
             
-            if third == 1:
+            if third == "n":
                 fourth = input("Move router to better location. (y/n):")
                     
                     
-                if fourth == 1:
-                    fifth = input ("Get a new router. (y/n):")
-                        
-                    if fifth ==1:
-                        print ("Get a new router.")
+                if fourth == "n":
+                    print("Get a new router.")
                     
-        else:
-            print("Netflix and Chill.")
+    else:
+        print("Netflix and Chill.")
+            
+def can_we_just_eat():
+    
+    vegetarian = input("Is anyone in your party a vegetarian? (y/n)")
+    vegan = input("Is anyone in your party a vegan? (y/n)")
+    lactose = input("Is anyone in your party gluten intolerant? (y/n)")
+
+    print("Here are your restaraunt choices: ")
+    
+    if vegetarian == "y" and vegan == "y" and lactose == "y":
+        print("Corner Café")
+        print("Chef's Kitchen")
+        print("Main Street Pizza Company")
+    if vegetarian == "y" and vegan == "y" and lactose != "y":
+        print("Corner Café")
+        print("Chef's Kitchen")
+    if vegetarian == "y" and vegan == "y" and lactose == "y":
+        print("Corner Café")
+        print("Chef's Kitchen")
+ 
+def hit_the_target_2():
+         #set numbers as words
+    TARGET_LLEFT_X = 150
+    TARGET_LLEFT_Y = 250
+    TARGET_WIDTH = 25
+    FORCE_FACTOR = 30
+    PROJECTILE_SPEED = 1
+    NORTH = 90
+    SOUTH = 270
+    EAST = 0
+    WEST = 180
+    
+    #make my target
+    turtle.penup()
+    turtle.goto( TARGET_LLEFT_X, TARGET_LLEFT_Y)
+    turtle.pendown()
+    turtle.setheading(EAST)
+    turtle.forward(TARGET_WIDTH)
+    turtle.setheading(SOUTH)
+    turtle.forward(TARGET_WIDTH)
+    turtle.setheading(WEST)
+    turtle.forward(TARGET_WIDTH)
+    turtle.setheading(NORTH)
+    turtle.forward(TARGET_WIDTH)
+    turtle.penup()
+    
+    #set turtle up
+    turtle.goto( 0, 0)
+    turtle.setheading (EAST)
+    turtle.showturtle()
+    turtle.speed(PROJECTILE_SPEED)
+    
+    #turtle angle, force
+    angle = float(input("Enter the projectile's angle:")) # get prohectile's angle
+    force = float(input("Enter the launch force (1-10):")) # recieve launch force
+    
+    distance = force * FORCE_FACTOR # calculate
+    
+    turtle.setheading(angle) # set angle turtle goes
+    turtle.forward(distance) # set distance turtle goes
+    
+    if (turtle.xcor() >= TARGET_LLEFT_X and
+        turtle.xcor() <= (TARGET_LLEFT_X + TARGET_WIDTH) and
+        turtle.ycor() >= TARGET_LLEFT_Y and
+        turtle.ycor() <= (TARGET_LLEFT_Y + TARGET_WIDTH)):
+        print("Target hit!")
+    else:
+        print("You missed.")
+        
+    
+     
