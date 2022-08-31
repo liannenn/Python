@@ -159,10 +159,12 @@ def hot_dog():
     
     hotdogs = (amt_of_ppl*amt_of_hotdogs) # calc amt of hotdogs needed
     
-    amtofhotdogs = (hotdogs/hotdog_pack) # calc amt of hot dog packs needed
+    amtofhotdog = (hotdogs/hotdog_pack) # calc amt of hot dog packs needed
+    amtofhotdogs = format(amtofhotdog, '.0f')
     amtofhotdogs2 = (hotdogs%hotdog_pack) # calc amt of extra hot dogs
     
-    amtofbuns = (hotdogs/hotdogbun) # calc amt of bun packs needed
+    amtofbun = (hotdogs/hotdogbun) # calc amt of bun packs needed
+    amtofbuns = format(amtofbun, '.0f')
     amtofbuns2 = (hotdogs%hotdogbun) # calc amt of extra buns
     
     print("You will need", amtofhotdogs, "pack(s) and", amtofhotdogs2, "remaining.")
