@@ -124,7 +124,20 @@ def user_squares2():
 def sum_numbers():
     MAX = 5 # define max
     print("This program calculates te sum of 5 numbers you will need.") # print 
-    for counter in range(MAX):
-        number = int(input("Please enter a number: "))
-        total = total + number
-        print("The total of your", MAX, "numbers is", total)
+    for counter in range(MAX): # choose the range for it
+        number = int(input("Please enter a number: ")) # input MAX numbers
+        total = total + number # calc
+        print("The total of your", MAX, "numbers is", total) #print the total
+        
+def property_tax():
+    #ask for lot number with 0 to end
+    #calculate the portperty value
+    #print the property tax
+    #print again
+    
+    lot_numb = input("Please enter a lot number (enter 0 to end): ") # input the lot number
+    prop_value = input("Please enter the property value:") # input the property value
+    prop_calc = lot_numb * prop_value @ .0065
+    print("Property tax: $", prop_calc)
+    
+    
