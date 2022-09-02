@@ -253,8 +253,8 @@ def can_we_just_eat():
         print("Corner Café")
         print("Chef's Kitchen")
  
-def hit_the_target_2():
-         #set numbers as words
+def turtleprog2():
+    #set numbers as words
     TARGET_LLEFT_X = 150
     TARGET_LLEFT_Y = 250
     TARGET_WIDTH = 25
@@ -280,6 +280,7 @@ def hit_the_target_2():
     turtle.penup()
     
     #set turtle up
+    
     turtle.goto( 0, 0)
     turtle.setheading (EAST)
     turtle.showturtle()
@@ -299,8 +300,19 @@ def hit_the_target_2():
         turtle.ycor() >= TARGET_LLEFT_Y and
         turtle.ycor() <= (TARGET_LLEFT_Y + TARGET_WIDTH)):
         print("Target hit!")
+        
+    elif angle > 70:
+      print('You missed the target.  Try using less angle.')
+
+    elif angle < 65:
+      print('You missed the target.  Try using more angle.')
+
+    elif (turtle.xcor() < 100 and turtle.ycor() < 250):
+      print("You missed the target.  Try using more force.")
+
+    elif (turtle.xcor() > 125 and turtle.ycor() > 275):
+      print("You missed the target.  Try using less force.")
+
     else:
-        print("You missed.")
-    if (turtle.xcor() >=
-    
-     
+      print("You're so close!")
+
