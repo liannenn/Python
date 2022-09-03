@@ -253,7 +253,7 @@ def can_we_just_eat():
         print("Corner Café")
         print("Chef's Kitchen")
  
-def turtleprog2():
+def turtleprog2_with_modification():
     #set numbers as words
     TARGET_LLEFT_X = 150
     TARGET_LLEFT_Y = 250
