@@ -194,7 +194,7 @@ def gross_pay():
     
     pay_rate = int(input("Enter the hourly rate: ")) # get pay rate
     
-    gross_oay = hours * pay_rate
+    gross_pay = hours * pay_rate
     
     #output gross play
     print("Gross pay: $", format(gross_pay, '.2f'), sep= '')
@@ -354,5 +354,21 @@ def spiral_circles():
     for x in range(NUM_CIRCLES):
         turtle.circle(RADIUS)
         turtle.left(ANGLE)
+        
+def starburst():
+    START_X = -200
+    START_Y = 0
+    NUM_LINES = 36
+    LINE_LENGTH = 400
+    ANGLE = 170
+    
+    turtle.penup()
+    turtle.goto(START_X, START_Y)
+    turtle.pendown()
+    
+    for ee in range(NUM_LINES):
+        turtle.forward(LINE_LENGTH)
+        turtle.left(ANGLE)
+    
    
     
