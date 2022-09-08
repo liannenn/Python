@@ -63,10 +63,41 @@ def hogwarts_tuition():
         
 def population():
     
-    start_pop = int(input("Enter the starting population: "))
+    counter = 1
+    population = int(input("Enter the starting population: "))
     daily_growth = int(input("Enter the percent of daily growth: "))
     days = int(input("Enter the number of days to simulate: "))
+    print(" ")
+    print("Day \t\t\t Projected Population")
+    print("----------------------------------------------")
         
-    for day in range(days):
+    for day in range(days-1):
+        #population = population * 30%
         counter += 1
+        days += 1
+        daily_growthh = daily_growth / 100
         
+        population = population * daily_growthh + population
+        
+        
+        print(counter, "\t\t\t", population)
+        
+def reverse_triangle():
+        
+    
+    base = int(input("Enter the base size of the triangle: "))
+    
+    for row in range(base - 1, base):
+        for column in range(row):
+            print("*", end='')
+            print()
+            
+def repeating_squares():
+    
+    import turtle
+    
+    TURTLE_START_Y = 250
+    TURTLE_START_X = 250
+    
+    turtle.penup()
+    turtle.goto(TURTLE_START_X, TURTLE_START_Y)

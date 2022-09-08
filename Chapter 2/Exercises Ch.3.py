@@ -178,7 +178,7 @@ def time_calculator():
         calc_min2 = format(calc_min, '.0f') # format for no decimals
         print("There are", calc_min2, "minute(s) and", min_sec, "second(s).") # print the minutes and seconds
         
-    if amt_of_seconds >= 3600 and amt_of_seconds <= 86400: # determine whether or not to use the if
+    if amt_of_seconds >= 3600 and amt_of_seconds < 86400: # determine whether or not to use the if
         calc_hour = amt_of_seconds // 3600 # divide to find the amount of hours
         
         hour_rem = calc_hour % 60 # find the remaining hours
@@ -193,9 +193,10 @@ def time_calculator():
         days2 = (amt_of_seconds % 86400)
         hours1 = (days2 // 3600)
         hours2 = (hours1 % 3600)
-        minutes1 = (hours2 % 60)
-        seconds = minutes1
-        print("There are", days1 , "day(s),", hours2 , "hour(s),", minutes1 , "minute(s), and", seconds, "second(s)")
+        minutes1 = (hours2 // 60)
+        minutes2 = (hours2 % 60)
+        seconds = minutes2
+        print("There are", days1 , "day(s),", hours2 , "hour(s),", minutes2 , "minute(s), and", seconds, "second(s)")
         
 def leap_year():
     year = int(input("Please enter a year: ")) # get the year
@@ -302,16 +303,16 @@ def turtleprog2_with_modification():
         print("Target hit!")
         
     elif angle > 70:
-      print('You missed the target.  Try using less angle.')
+        print('You missed the target.  Try using less angle.')
 
     elif angle < 65:
-      print('You missed the target.  Try using more angle.')
+        print('You missed the target.  Try using more angle.')
 
     elif (turtle.xcor() < 100 and turtle.ycor() < 250):
-      print("You missed the target.  Try using more force.")
+        print("You missed the target.  Try using more force.")
 
     elif (turtle.xcor() > 125 and turtle.ycor() > 275):
-      print("You missed the target.  Try using less force.")
+        print("You missed the target.  Try using less force.")
 
     else:
-      print("You're so close!")
+        print("You're so close!")
