@@ -170,33 +170,23 @@ def hot_dog():
     
 def time_calculator():
     
-    amt_of_seconds = int(input("Amount of seconds: ")) # get the amount of seconds needed
+    total_seconds = int(input("Amount of seconds: ")) # get the amount of seconds needed
     
-    if amt_of_seconds >= 60 and amt_of_seconds <= 3600: # determine whether or not to use the if
-        calc_min = amt_of_seconds // 60 # divide for number of minutes
-        min_sec = amt_of_seconds % 60 # find the remaining seconds
-        calc_min2 = format(calc_min, '.0f') # format for no decimals
-        print("There are", calc_min2, "minute(s) and", min_sec, "second(s).") # print the minutes and seconds
-        
-    if amt_of_seconds >= 3600 and amt_of_seconds < 86400: # determine whether or not to use the if
-        calc_hour = amt_of_seconds // 3600 # divide to find the amount of hours
-        
-        hour_rem = calc_hour % 60 # find the remaining hours
-        hour_sec = hour_rem / 1 # find the reminaining seconds
-        calc_hour2 = format(calc_hour, '.0f') # format for no decimal places
-        hour_rem2 = format(hour_rem, '.0f') # find the remaining hours
-        print("There are", calc_hour2 , "hour(s),", hour_rem2 , "minute(s) and,", hour_sec , "second(s).")
+    seconds = total_seconds % 60
+    minutes = ( total_seconds // 60) % 60
+    hours = total_seconds // 3600
+    days = total_seconds // 86400
     
-    if amt_of_seconds >= 86400: # determine whether or not to use the if
-        
-        days1 = (amt_of_seconds // 86400)
-        days2 = (amt_of_seconds % 86400)
-        hours1 = (days2 // 3600)
-        hours2 = (hours1 % 3600)
-        minutes1 = (hours2 // 60)
-        minutes2 = (hours2 % 60)
-        seconds = minutes2
-        print("There are", days1 , "day(s),", hours2 , "hour(s),", minutes2 , "minute(s), and", seconds, "second(s)")
+    print("There are:")
+    if hours >= 24:
+        hours = hours - 24
+    if total_seconds >= 86400:
+        print("Days: ", days)
+    if total_seconds >= 3600:
+        print("Hours: ", hours)
+    if total_seconds >= 60:
+        print("Minutes: ", minutes)
+    print("Seconds: ", seconds)
         
 def leap_year():
     year = int(input("Please enter a year: ")) # get the year
