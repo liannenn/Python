@@ -2,6 +2,7 @@ my_value = 10 #global variable
 CONTRIBUTION_RATE = 0.05
 DISCOUNT_PERCENT = 0.20
 import random
+import math
 
 def message():
     
@@ -487,7 +488,7 @@ def get_sales():
     
     #prompt the user and input monthly sales
     sales = float(input("Please enter the amount of sales for the month: "))
-    determine_com_rate(sales)
+    return sales
     
     # -------------------------------------------------------------------- #
     
@@ -529,4 +530,86 @@ def determine_com_rate(sales):
         
     else:
         rate = 0.16
+        
+    # ____________________________________________________________________ #
     
+def get_name(): #string return example
+    #get name accepts no arguments
+    #it prompts the user for a name
+    #and returns the name as a string
+    
+    first_name = input("Please enter your first name: ")
+    last_name = input("Please enter your last name: ")
+    get_name = first_name, last_name
+    
+    return get_name
+
+    # ____________________________________________________________________ #
+
+def get_num():
+    
+    num = input("Please enter the number: ")
+    return num
+    validate_even(num)
+
+
+    # -------------------------------------------------------------------- #
+    
+def validate_even(num): #boolean return example
+    #validate even accepts an intefer for num
+    #it tests if nuk is even and returns true
+    
+    if (num % 2) == 0:
+        return True
+    else:
+        return False
+    
+    # ____________________________________________________________________ #
+
+def square_root(): # Program 5-24
+    import math
+    x = int(input("Please enter a value to find the square root: "))
+    squareroot = math.sqrt(x)
+    print("The square root of", x, "is:", squareroot)
+    
+    
+    # ____________________________________________________________________ #
+    
+def hypotenuse(): # Program 5-25
+    sideA = int(input("Please enter the value of side A: "))
+    sideB = int(input("Please enter the value of side B: "))
+    
+    hypot = math.hypot(sideA, sideB)
+    
+    print("The length of the hypoteneuse is: ", hypot)
+    
+    # ____________________________________________________________________ #
+    
+def area(radius):
+    #area accepts an integer for radius
+    #it calculates and returns the area of a circle
+    return math.pi * radius **2
+
+    # -------------------------------------------------------------------- #
+
+def circumference(radius):
+    #circumference accepts an argument for radius
+    #it calculates and returns the radius of a circle
+    
+    return 2* math.pi * radius
+
+    # -------------------------------------------------------------------- #
+    
+def area(width, length):
+    #area accepts integers for width and length
+    #it calculates and returns the area of a rectangle
+    
+    return width * length
+
+    # -------------------------------------------------------------------- #
+    
+def perimeter(width, length):
+    #perimeter accepts integers for width and length
+    #it calculates and returns the perimeter of a rectangle
+     
+    return (width * 2) + (length *2)
