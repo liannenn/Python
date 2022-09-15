@@ -83,14 +83,16 @@ def population():
         print(counter, "\t\t\t", population) # print counter and population
         
 def reverse_triangle():
-        
-    
-    base = int(input("Enter the base size of the triangle: "))
-    
-    for row in range(base -1 , base ):
-        for column in range(row):
-            print("*", end='')
-            print()
+
+    rows = int(input("Enter the number of rows: "))  
+      
+    # the outer loop is executing in reversed order  
+    for row in range(rows + 1, 0, -1):    
+        for column in range(0, row - 1):  
+            print("*", end=' ')  
+        print(" ")   
+
+
             
 def stair_pattern():
     
@@ -98,7 +100,7 @@ def stair_pattern():
     
     for stairs in range(1, steps + 1):
         for column in range(stairs):
-            print(" ", end='')
+            print("*", " ", end='')
         print(" ")
             
 def repeating_squares():
@@ -142,43 +144,13 @@ def repeating_squares():
         
 def hypnotic_pattern():
     
-    offset = 5
-    import turtle # imports turtle
-    
-    swirlies =int(input("Enter the amount of swirlies you would like? ")) # inputs amt of squares
-    
-    counter = 1 # increment the accumulator
-    TURTLE_START_Y = -40 # set turtle's starting y point
-    TURTLE_START_X = -40 # set turtle's starting x point
-    TURTLE_WRITE = 20 # set turtle's 1st writing distance
-    
-    NORTH = 90 # shortcut for noth
-    SOUTH = 270 # shortcut for south
-    EAST = 0 # shortcut for east
-    WEST = 180 #shortcut for west
-    
-    turtle.penup() # set pen up 
-    turtle.goto(TURTLE_START_X, TURTLE_START_Y) # move to turtle's starting x and y point
+    import turtle
 
-    
-    
-    while counter <= swirlies: # begin the while loop
-        turtle.goto(TURTLE_START_X, TURTLE_START_Y)
-        
-        turtle.setheading(NORTH)
-        turtle.forward(TURTLE_WRITE)
-        
-        turtle.setheading(WEST)
-        turtle.forward(TURTLE_WRITE)
-        
-        turtle.setheading(SOUTH)
-        turtle.forward(TURTLE_WRITE)
-        
-        turtle.setheading(EAST)
-        turtle.forward(TURTLE_WRITE)
-        
-        
-        
-        
-        TURTLE_WRITE = TURTLE_WRITE + 5
-        
+    turtle.speed(0)
+
+    length = 5
+
+    for times in range (40):
+        turtle.forward(length)
+        turtle.left(90)
+        length += 5
