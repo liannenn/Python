@@ -451,3 +451,19 @@ def gross_pay2():
         print("\n")
         gross_pay2()
         
+def display_file1(): #Program -24
+    #display file 1 accepts no arguments
+    #takes input from the user for a filename to open
+    #and reads the contents of the file
+    
+    #get input from the user
+    filename = input("enter filename to open: ")
+    
+    #open the file and read the contents
+    infile = open(filename, 'r')
+    contents = infile.read()
+    
+    #output and close the file
+    print(contents)
+    infile.close()
+        
