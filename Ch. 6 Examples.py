@@ -352,3 +352,102 @@ def modify_coffee(): #Program 6-18
     else:
         print("The quantity for", search,"has been updated to", new_qty, "pounds.")
         
+def delete_rec():
+   if search.lower() != desc.lower(): #coffee found
+       #write the description and quantity to the temp file
+       temp_file.write(desc + '\n')
+       tempfile.write(qty + '\n')
+       
+   else:
+        #toggle flag to true
+        found = True
+        
+def exit_coffee():
+    print("Thank you for using Caffeine Overload Inventory Control System.")
+        
+def coffee_shop(): #Program 6-16 - 6-19 modification
+    #coffee shop accepts no arguments
+    #it calls coffee_shop_menu to display a menu to the user
+    #and calls each function according to the user input
+    
+    print("Welcome to Caffeine Overload Inventory Control System. Please choose an inventory option.")
+    print("1) Add a record")  
+    print("2) Modify a record")
+    print("3) Delete a record")
+    print("4) Display all saved records")
+    print("5) Exit")
+    option = input("Inventory option: ")
+    
+    if option == '1':
+        write_coffee()
+    if option == '2':
+        modify_coffee()
+    if option == '3':
+        delete_rec()
+    if option == '4':
+        read_coffee()
+    if option == '5':
+        exit_coffee()
+    else:
+        print("Enter a valid input.")
+        coffee_shop()
+        
+def division(): #Program 6-20
+    #division accepts no arguments
+    #it prompts the user for two integers
+    #it divides num1/num2 and outputs the result
+    
+    #get input from the user
+    num1 = int(input("Enter a number: "))
+    num2 = int(input("Enter a second number: "))
+    
+    #perform calculations and output
+    result = num1 / num2
+    
+    print(num1, "divided by", num2, "is", result)
+    
+def division2():
+    
+    if num2 != 0:
+        result = num1/num2
+        print(num1, "divided by", num2, "is", result)
+    else:
+        print("Cannot divide by 0.")
+        
+def gross_pay1(): #Program 6-22
+    #gross pay 1 accepts no arguments
+    #it prompts the user for hours worked and hourly pay
+    #it calculates the gross pay = hours * rate and outputs the result
+    
+    #get input from the user
+    hours = int(input("Enter the number of hours worked: "))
+    rate = float(input("Enter the pay rate: "))
+    
+    pay = hours * rate
+    
+    print("Gross pay: $", format(pay, ',.2f'), sep ='')
+    
+
+def gross_pay2():
+    #gross pay 2 accepts no arguments
+    #it prompts the user for hours worked and hourly pay
+    #it calculates the gross pay = hours * rate and outputs the result
+    
+    #get input from the user
+    
+    
+    try:
+        hours = int(input("Enter the number of hours worked: "))
+        rate = float(input("Enter the pay rate: "))
+        pay = hours * rate
+    
+        print("Gross pay: $", format(pay, ',.2f'), sep ='')
+    
+    except ValueError as err:
+        
+        print('\n',err)
+        print("Please enter numbers only.\n")
+        print("----------------------------")
+        print("\n")
+        gross_pay2()
+        
