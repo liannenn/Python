@@ -451,7 +451,7 @@ def gross_pay2():
         print("\n")
         gross_pay2()
         
-def display_file1(): #Program -24
+def display_file1(): #Program 6-24
     #display file 1 accepts no arguments
     #takes input from the user for a filename to open
     #and reads the contents of the file
@@ -466,4 +466,79 @@ def display_file1(): #Program -24
     #output and close the file
     print(contents)
     infile.close()
+    
+def display_file2(): #Program 6-25
+    #display file 1 accepts no arguments
+    #takes input from the user for a filename to open
+    #and reads the contents of the file
+    try:
+    
+        #get input from the user
+        filename = input("Enter filename to open: ")
         
+        #open the file and read the contents
+        infile = open(filename, 'r')
+        contents = infile.read()
+        
+        #output and close the file
+        print(contents)
+        infile.close()
+     
+    except IOError as IO:
+        
+        print("File does not exist. ")
+        
+def sales_report1():
+    
+    try:
+        file = open("sales.txt", 'r')
+        
+        line = sales_file.readline()
+        
+        while line != '':
+            amount = float(line)
+            
+            print(format(amount, ',.2f'))
+            
+            line = sales_file.readline()
+            
+        sales_file.close()
+        
+    except IOError:
+        
+        print("ERROR: An errror occurred trying to read the file.")
+        
+    except ValueError:
+        
+        print("ERROR: Non-numeric data found, calculations haulted.")
+        
+    except:
+        print("ERROR: A problem has occurred.")
+        
+def salesreport2():
+    try:
+        file = open("sales.txt", 'r')
+        
+        line = sales_file.readline()
+        
+        while line != '':
+            amount = float(line)
+            
+            line = sales_file.readline()
+            
+        sales_file.close()
+        
+    except IOError:
+        
+        print("ERROR: An errror occurred trying to read the file.")
+        
+    except ValueError:
+        
+        print("ERROR: Non-numeric data found, calculations haulted.")
+        
+    except:
+        print("ERROR: A problem has occurred.")
+        
+    else:
+        #output the data
+        print(format(total, ',.2f'))
