@@ -1,27 +1,17 @@
 def line_numbers():
     
     try:
-        file = open("steps.txt", "r")
+        infile = input("Insert file name: ")
+    
+        while line != '':
+            
+            line = infile.readline()
+            file_contents = open(infile, "r")
+            file_contents = infile.read()
+            print(infile_contents)
+            infile.close()
         
     except:
-        print("[Errno 2] No such file or directory: '",file,"'")    
-
-def line_counter():
-    
-    try:
-    
-        file = input("Enter the file to read: ")
-        openfile = open(file, 'r')
-        line = 
         
-        print(file, "contains", line, "lines.")
-        
-    except:
-        print("[Errno 2] No such file or directory: '",file,"'")
-        
-def average_of_numbers():
-    
-    try:
-        
-        
-        
+        print("[Errno 2] No such file or directory: '",infile,"'")    
+      
