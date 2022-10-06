@@ -1,0 +1,27 @@
+import turtle
+
+t = turtle.Turtle()
+t.speed(0)
+
+def checkerboard():
+     for row in range(5):
+         for column in range(5):
+             if (row+column)%2==0:
+                 color = "black"
+             else:
+                 color = "white"
+             t.penup()
+             t.goto(row*40,column*40)
+             t.pendown()
+             squaress(40, color)
+
+def squaress(s, color):
+     t.fillcolor(color)
+     t.begin_fill()
+     for count in range(4):
+          t.forward(s)
+          t.left(90)
+     t.end_fill()
+
+checkerboard()
+
