@@ -190,11 +190,10 @@ def visual_math(number1, number2):
  
      # ____________________________________________________________________ #
      
-     
 def game():
     choices()
         
-    # -------------------------------------------------------------------- #
+    # ____________________________________________________________________ #
         
 def choices():
     
@@ -214,177 +213,166 @@ def choices():
     if computerchoice == 5:
         print("The computer chose....spock")
     
-    winner(weaponofchoice, computerchoice)
-    
-    # -------------------------------------------------------------------- #
-    
-def winner(weaponofchoice, computerchoice):
-    
-    if weaponofchoice == "rock" and computerchoice == "rock":
+    if weaponofchoice == "rock" and computerchoice == 1:
         print("It's a tie!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "paper" and computerchoice == "paper":
+    if weaponofchoice == "paper" and computerchoice == 2:
         print("It's a tie!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "scissor" and computerchoice == "scissor":
+    if weaponofchoice == "scissor" and computerchoice == 3:
         print("It's a tie!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "rock" and computerchoice == "rock":
+    if weaponofchoice == "lizard" and computerchoice == 4:
         print("It's a tie!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "lizard" and computerchoice == "lizard":
+    if weaponofchoice == "spock" and computerchoice == 5:
         print("It's a tie!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "spock" and computerchoice == "spock":
-        print("It's a tie!")
-        repeat = input("Play again? (y/n) ")
-        if repeat == "y":
-            choices()
-            
-    if weaponofchoice == "rock" and computerchoice == "paper":
+    if weaponofchoice == "rock" and computerchoice == 2:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "scissors" and computerchoice == "rock":
+    if weaponofchoice == "scissors" and computerchoice == 1:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "scissors" and computerchoice == "rock":
+    if weaponofchoice == "scissors" and computerchoice == 1:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "rock" and computerchoice == "spock":
+    if weaponofchoice == "rock" and computerchoice == 5:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "paper" and computerchoice == "scissors":
+    if weaponofchoice == "paper" and computerchoice == 3:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
                         
-    if weaponofchoice == "paper" and computerchoice == "lizard":
+    if weaponofchoice == "paper" and computerchoice == 4:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "scissors" and computerchoice == "spock":
+    if weaponofchoice == "scissors" and computerchoice == 5:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "lizard" and computerchoice == "rock":
+    if weaponofchoice == "lizard" and computerchoice == 1:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "lizard" and computerchoice == "scissors":
+    if weaponofchoice == "lizard" and computerchoice == 3:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "spock" and computerchoice == "lizard":
+    if weaponofchoice == "spock" and computerchoice == 4:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
                 
-    if weaponofchoice == "spock" and computerchoice == "paper":
+    if weaponofchoice == "spock" and computerchoice == 2:
         print("The computer wins!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "spock" and computerchoice == "rock":
+    if weaponofchoice == "spock" and computerchoice == 1:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "spock" and computerchoice == "scissors":
+    if weaponofchoice == "spock" and computerchoice == 3:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                 
-    if weaponofchoice == "lizard" and computerchoice == "spock":
+    if weaponofchoice == "lizard" and computerchoice == 5:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "lizard" and computerchoice == "paper":
+    if weaponofchoice == "lizard" and computerchoice == 2:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                  
-    if weaponofchoice == "scissors" and computerchoice == "lizard":
+    if weaponofchoice == "scissors" and computerchoice == 4:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
                         
-    if weaponofchoice == "paper" and computerchoice == "spock":
+    if weaponofchoice == "paper" and computerchoice == 5:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                
-    if weaponofchoice == "paper" and computerchoice == "rock":
+    if weaponofchoice == "paper" and computerchoice == 1:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
             
-    if weaponofchoice == "rock" and computerchoice == "scissors":
+    if weaponofchoice == "rock" and computerchoice == 3:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                         
-    if weaponofchoice == "rock" and computerchoice == "lizard":
+    if weaponofchoice == "rock" and computerchoice == 4:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
                     
-    if weaponofchoice == "scissors" and computerchoice == "paper":
+    if weaponofchoice == "scissors" and computerchoice == 2:
         print("You win!")
         repeat = input("Play again? (y/n) ")
         if repeat == "y":
             choices()
-                
+                 
+
     # ____________________________________________________________________ #
 def drawSnowman():
     drawBase()
@@ -523,7 +511,10 @@ def drawPipe():
     turtle.penup()
     turtle.goto(0,200)
     
+    turtle.pencolor('dark green')
     turtle.pendown()
+    turtle.begin_fill()
+    turtle.fillcolor('dark green')
     turtle.right(15)
     turtle.forward(-50)
     turtle.forward(100)
@@ -532,45 +523,18 @@ def drawPipe():
     turtle.left(90)
     turtle.forward(100)
     turtle.left(90)
-    turtle.forward(20)
-    turtle.left(360)
-def my_graphics_square():
-    
-    turtle.fillcolor('black')
-    turtle.penup()
-    turtle.goto(-200, 200)
-    turtle.pendown()
-    turtle.begin_fill()
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.end_fill()
-    
-    turtle.begin_fill()
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.right(90)
-    turtle.forward(75)
-    turtle.end_fill()
-    
-    turtle.right(180)
-    turtle.right(90)
     turtle.forward(15)
+    turtle.end_fill()
+    
+    turtle.begin_fill()
+    turtle.left(180)
+    turtle.right(90)
+    turtle.forward(20)
     turtle.left(90)
-    turtle.forward(25)
+    turtle.forward(40)
+    turtle.right(90)
+    turtle.forward(60)
+    turtle.right(90)
+    turtle.forward(40)
+    turtle.end_fill()
     
