@@ -1,4 +1,5 @@
 import random
+import matplotlib
 
 def isnumber(): #numberic program
     #isnumber accepts no arguments
@@ -203,4 +204,276 @@ def list_remove(): #Program 7-4
         print()
         print(search, "was not found in the list. Check your spelling and try again.")
         print("\nHere is the list: ", foods)
+     
+#---------------------------------------------------------------------------------------------#
         
+def usingindex():
+    
+    my_list = [1, 2, 3, 4, 5]
+    
+    del my_list[2]
+    
+    print(my_list)
+    
+    print("Lowest Value: ", min(my_list))
+    
+    print("Highest Value: ", max(my_list))
+    
+#---------------------------------------------------------------------------------------------#
+    
+def copyinglists():
+    
+    list1 = [1, 2, 3, 4]
+    list2 = []
+    
+    for element in list1:
+        list2.append(element)
+    
+    list2.append(5)
+    
+    print(list1)
+    print(list2)
+    
+#---------------------------------------------------------------------------------------------#
+
+def list_total(): #Program 7-8
+    #list total accepts no arguments
+    #it creates a list of numbers [2, 4, 6, 8, 10]
+    #and loops to accumulate the total of all numbers
+    #in the list
+    
+    total = 0
+    
+    numbers = [2, 4, 6, 8, 10]
+    
+    for num in numbers:
+    
+        total += num
+        
+    
+    print("The sum of", numbers, "is: ", total)
+        
+#---------------------------------------------------------------------------------------------#
+
+def list_avg(): #Program 7-9
+    #list total accepts no arguments
+    #it creates a list of numbers [2, 4, 6, 8, 10]
+    #and loops to accumulate the total of all numbers
+    #in the list
+    
+    total = 0
+    
+    numbers = [2, 4, 6, 8, 10]
+    
+    for num in numbers:
+    
+        total += num
+        
+        truetotal = total/len(numbers)
+        
+    
+    print("The average of", numbers, "is: ", truetotal)
+        
+#---------------------------------------------------------------------------------------------#
+
+def list_function(): # Program 7-10
+    #list function accepts no arguments
+    #it creates a list [2, 4, 6, 8, 10]
+    #it passes the list to get_total
+    #it prints the returned total
+    
+    list = [2, 4, 6, 8, 10]
+    
+def get_total(list):
+
+    for num in numbers:
+
+        total += num
+    
+    print("The total of", list, "is: ", total)
+    
+#---------------------------------------------------------------------------------------------#
+
+def list_return(): #Program 7-11
+    #list return accepts no arguments
+    #it calls get_values to create a list reference
+    #and outputs the numbers in the list
+    
+    list = []
+    y = '1'
+    
+    while cont.lower() == 1:
+    
+        number = input("Input a number: ")
+        cont = input("Do you want to enter another number? (y/n) ")
+        
+        list.append(number)
+        
+    print("You entered the numbers: ", list)
+    
+#---------------------------------------------------------------------------------------------#
+    
+def test_calc(): #Program 7-12
+    #test calc accepts no arguments
+    
+    try:
+        
+        scores = get_scores()
+        
+        lowest = min(scores)
+        
+        print("Dropps the lowest score of", lowest)
+        
+        scores.remove(lowest)
+        
+        total = get_total(scores)
+        average_score = total / len(scores)
+        
+        print("\nThe average score, with", lowest, "dropped from the score, is", 
+            format(average_score, ',.2f'))
+        
+    except Exception as err:
+            print(err)
+            
+def get_scores():
+    scores = []
+    again = 'y'
+        
+    while again.lower() == 'y':
+        try:
+            score = float(input("Enter a score: "))
+        except:
+            print("Please enter a valid score.\n")
+        else:
+            scores.append(score)
+                    
+        again = input("Enter another score? (y/n:: ")
+        print()
+    return scores
+        
+#---------------------------------------------------------------------------------------------#
+
+def list_writelines(): #Program 7-13
+    #list writelines accepts no arguments
+    #it writes the entire contents of a list
+    #to the file cities.txt
+    
+    cities = ['Kansas City', 'Lawrence', 'Wichita', 'Manhattan']
+            
+    try:
+        #open the file
+        outfile = open('cities.txt', 'w')
+        
+        #write the list to the file
+        outfile.writelines(cities)
+        
+        #close the file
+        print("All data written to cities.txt")
+        outfile.close()
+        
+    except Exception as err:
+        print(err)
+        
+#---------------------------------------------------------------------------------------------#
+
+def list_read(): #Program 7-15
+    #list read accepts no arguments
+    #it reads from cities.txt and aggregates the data
+    #to the list cities, stripping the \n from each
+    
+    try:
+        #open the file
+        infile = open('cities.txt', 'r')
+        
+        #read the contents to a list
+        cities = infile.readlines()
+        
+        #close the file
+        infile.close()
+        
+    except:
+        print("error reading from the file.")
+        
+    #initialize index
+        index = 0
+        
+    #strip the newline and reassign it to the list
+        while index < len(cities):
+            cities[index] = citiex[index].rstrip('\n')
+            index += 1
+        print("Here is the information read from cities.txt.")
+        print(cities)
+        
+#---------------------------------------------------------------------------------------------#
+
+def list_write_numbers(): #Program 7-16
+    #list write numbers accepts no arguments
+    #it saves a list of integers [1, 2, 3, 4, 5, 6, 7]
+    #to the file numerlist.txt
+    
+    #create the list
+    numbers = [1, 2, 3, 4, 5, 6, 7]
+    
+    #open the file
+    outfile = open('numberlist.txt', 'w')
+    
+    #loop to write the numbers to the list
+    for number in numbers:
+        outfile.write(str(number) + '\n')
+    #close the fie
+    outfile.close()
+    print('All numbers saved to numberlist.txt')
+    
+        
+#---------------------------------------------------------------------------------------------#
+
+def list_read_numbers(): #Program 7-17
+    #list read numbers accepts no arguments
+    #it reads integers from the file numberslist.txt
+    #and aggregates them to a list
+    
+    #initialize the aggregator
+    numbers = []
+    
+    try:
+        #open the file
+        infile = open('numberlist.txt', 'r')
+        
+        #loop to add each number to the list
+        for num in infile:
+            numbers.append(int(num.rstrip('\n')))
+            
+        infile.close()
+        
+    except Exception as err:
+        print(err)
+    print('Here is the list created from numberlist.txt:')
+    print(numbers)
+         
+#---------------------------------------------------------------------------------------------#
+
+def random_numbers(): #Program 7-18 (import random at the top of your file)
+    #random numbers accepts no arguments
+    #it creates a 2D list with a maximum row index of 3
+    #and a maximum column index of 2
+    #it uses nested loops to fill the 2D list with a random number
+    #from 1-100
+    
+    #constants for row/cols loops
+    ROWS = 3
+    COLS = 3
+    
+    values = [ [0, 0, 0, 0],
+               [0, 0, 0, 0],
+               [0, 0, 0, 0] ]
+    
+    #loop to fille the list with random numbers
+    for row in range(ROWS):
+        for col in range(COLS): #for each row, fill all columns
+            values[row][col] = random.randint(1,100)
+            
+    #output the list
+            print(values)
+                   
+#---------------------------------------------------------------------------------------------#
+
