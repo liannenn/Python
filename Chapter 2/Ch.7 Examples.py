@@ -322,7 +322,7 @@ def test_calc(): #Program 7-12
         
         lowest = min(scores)
         
-        print("Dropps the lowest score of", lowest)
+        print("Drops the lowest score of", lowest)
         
         scores.remove(lowest)
         

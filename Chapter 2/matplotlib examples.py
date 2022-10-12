@@ -45,31 +45,31 @@ def bar_chart(): #Program 7-24
     #and bar heights and uses matplotlib to plot a bar chart
     
     #create a list for bar center and height
-        left_edges = [0, 10, 20, 30, 40]
-        heights = [100, 200, 300, 400, 500]
+    left_edges = [0, 10, 20, 30, 40]
+    heights = [100, 200, 300, 400, 500]
         
-        #set bar width
-        bar_width = 10
+    #set bar width
+    bar_width = 10
+    
+    #plot the chart
+    plt.bar(left_edges, heights, bar_width,
+        color = ('r', 'g', 'b', 'y', 'k'))
         
-        #plot the chart
-        pltbar(left_edges, heights, bar_width,
-               color = ('r', 'g', 'b', 'y', 'k'))
+    #add a title
+    plt.title('Sales by Year')
         
-        #add a title
-        plt.title('Sales by Year')
+    #add labels for axes
+    plt.xlabel('Year')
+    plt.ylabel('Sales')
         
-        #add labels for axes
-        plt.xlabel('Year')
-        plt.ylabel('Sales')
+    #add custom tick marks
+    plt.xticks([5, 15, 25, 35, 45],
+                ['2016', '2017', '2018', '2019', '2020'])
+    plt.yticks([0, 100, 200, 300, 400, 500],
+    ['$0m','$2m','$3m','$4m','$5m'])
         
-        #add custom tick marks
-        plt.xticks([5, 15, 25, 35, 45],
-                   ['2016', '2017', '2018', '2019', '2020'])
-        plt.yticks([0, 100, 200, 300, 400, 500],
-        ['$0m','$2m','$3m','$4m','$5m'])
-        
-        #show the chart
-        plt.show()
+    #show the chart
+    plt.show()
         
 def pie_chart(): #Program 7-27
     #pie chart accepts no arguments
