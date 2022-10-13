@@ -47,13 +47,32 @@ def rainfall():
     print("Average rain per month:", avg," inches.")
     
 def charge_accts():
+    #charge_accts accepts no arguments
+    #it opens charge_accounts.txt
+    
+    content_list = []
+    numb = []
     
     try:
-        open('lotr.txt', 'r')
-        acc_numb = input("Enter an account number: ")
+        list = open('charge_accounts.txt', 'r')
+        acc_numb = int(input("Enter an account number: "))
+        content_list.append(list)
+        numb.append(acc_numb)
         
+        if numb in content_list:
+            cont = input("\nThe account number is valid.\n\nCheck another account number? (y/n)")
+
+            if cont == 'y' or 'Y':
+                charge_accts()
+            
+        else:
+            
+            cont = input("\nThe number is invalid.\n\nCheck another account number? (y/n) ")
+            if cont == 'y' or 'Y':
+                charge_accts()
+                
+            
     except ValueError:
-        cont = input("The number is invalid.\n\nCheck another account number? (y/n)")
-    if cont == 'y' or 'Y':
-        charge_accts()
-        
+        cont = input("\nThe number is invalid, please only enter numbers.\n\nCheck another account number? (y/n) ")
+        if cont == 'y' or 'Y':
+            charge_accts()
