@@ -54,9 +54,9 @@ def charge_accts():
     numb = []
     
     try:
-        list = open('charge_accounts.txt', 'r')
-        acc_numb = int(input("Enter an account number: "))
-        content_list.append(list)
+        list_ = open('charge_accounts.txt', 'r')
+        acc_numb = input("Enter an account number: ")
+        content_list.append(list_)
         numb.append(acc_numb)
         
         if numb in content_list:
@@ -70,9 +70,10 @@ def charge_accts():
             cont = input("\nThe number is invalid.\n\nCheck another account number? (y/n) ")
             if cont == 'y' or 'Y':
                 charge_accts()
-                
-            
+            if cont != 'y' or 'Y':
+                print(" ")
+                    
     except ValueError:
         cont = input("\nThe number is invalid, please only enter numbers.\n\nCheck another account number? (y/n) ")
         if cont == 'y' or 'Y':
-            charge_accts()
+            charge_accts()           
