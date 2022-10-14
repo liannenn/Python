@@ -1,0 +1,101 @@
+import random
+MONTHS = 12
+
+def line_numbers():
+    try:
+        filename = input('Enter a filename: ')
+
+        infile = open(filename, 'r')
+
+        amt_of_lines = 1
+        for line in infile:
+            print(str(amt_of_lines) + ': ' + line.rstrip('\n'))
+            amt_of_lines += 1
+
+        infile.close()
+    except Exception as err:
+        print(err)
+
+def line_counter():
+    
+    filename = input("Please enter a file to read: ")
+    counter = 0
+    
+    try:
+        infile = open(filename, 'r')
+        for line in infile:
+            counter = counter + 1
+        print("This file contains", counter, "lines.")
+        
+    except:
+        print("File not found.")
+
+def avg_of_numbs():
+    
+    try:
+        infile = open('numbers.txt', 'r')
+
+        total = 0.0
+        lines_read = 0
+
+        for line in infile:
+            total += float(line)
+            lines_read += 1
+            avg = total / lines_read
+            
+        print('Average of numbers is', avg)
+        
+    except ValueError:
+        print(ValueError)
+
+def ran_num_writer():
+    try:
+        outfile = open('Random.txt', 'w')
+
+        for count in range(int(input('How many numbers will the file hold? '))):
+            line = str(random.randint(1, 500))
+            outfile.write(f'{line}' + '\n')
+
+        outfile.close()
+        print('The numbers have been added to Random.txt.')
+    except IOError:
+        print(IOError)
+    except TypeError:
+        print(TypeError)
+    except ValueError:
+        print(ValueError)
+        
+ def ran_num_reader():
+    counter = 0
+    total = 0
+    
+    try:
+        infile = open('Random.txt', 'r')
+        for line in infile:
+            line = int(line)
+            print(line)
+            counter = counter + 1
+            total = total + line
+        print('The total of the', counter, 'random numbers is', total)
+    except:
+        print('Error, file unavailable')
+
+def webpage():
+    student_name = input('Enter your name: ')
+
+    student_description = input('Describe yourself: ')
+
+    with open('student.html', 'w') as outfile:
+        outfile.write('<html>\n')
+        outfile.write('<head>\n')
+        outfile.write('</head>\n')
+        outfile.write('<body>\n')
+        outfile.write('     <center>\n')
+        outfile.write('         <h1>' + student_name + '</h1>\n')
+        outfile.write('     </center.\n')
+        outfile.write('     <hr />\n')
+        outfile.write('     ' + student_description + '\n')
+        outfile.write('     <hr />\n')
+        outfile.write('</body>')
+        outfile.write('</html>')
+
