@@ -76,4 +76,20 @@ def charge_accts():
     except ValueError:
         cont = input("\nThe number is invalid, please only enter numbers.\n\nCheck another account number? (y/n) ")
         if cont == 'y' or 'Y':
-            charge_accts()           
+            charge_accts()
+            
+def drivers_exam():
+    try:
+        answers_ = []
+        file_name = input("Please enter the name of the file to read: ")
+        answers_ = open(file_name, 'r')
+        answers_list = []
+        answers_list.append(answers_)
+        
+        
+        
+    except ValueError:
+        print(file_name, "not defined.")
+        
+    except:
+        print('Error.')
