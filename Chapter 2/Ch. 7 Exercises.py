@@ -64,6 +64,8 @@ def charge_accts():
 
             if cont == 'y' or 'Y':
                 charge_accts()
+            if cont != 'y' or 'Y':
+                print(" ")
             
         else:
             
@@ -93,3 +95,4 @@ def drivers_exam():
         
     except:
         print('Error.')
+        
