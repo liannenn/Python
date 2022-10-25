@@ -24,13 +24,13 @@ def valid_password(password): #Program 8-6
     
     for letter in password:
         if password.isalnum():
-            has_number = True
+            has_digit = True
             if password.islower():
                 has_lower = True
                 if password.isupper():
                     has_upper = True
                     if password >= 6:
-                        has_character = true
+                        has_character = True
                         
     if has_upper is True and has_lower is True and has_digit is True and has_character is True:
         print("Password accepted.")
