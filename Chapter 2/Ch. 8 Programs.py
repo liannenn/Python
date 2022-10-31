@@ -64,21 +64,32 @@ def date_converter():
         
         date_converter
         
-def morse_code():
-    #morse code accepts no arguments
-    #it converts the input given to morse code
-    
-    try:
-        message = input("Enter a message to encode to morse code: ")
-        
-        alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I,' 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'X']
-        
-        letters = ['•-', '-•••', '-•-•', '-••', '•', '••-•', '--•', '••••', '••',
-                   '•---', '-•-', '•-••', '--','-•', '---', '•--•', '--•-', '•-•',
-                   '•••', '-', '••-', '•••-', '•--','-••-', '-•--', '--••']
 
-        numbers = ['•----', '••---', '•••---', '••••-', '•••••', '-••••', '--•••',
-                   '---••', '----•', '-----']
-        
-        
+def morse_code_main():
+    message = input("Enter a message to encode to morse code: ").strip().upper()
+    
+    if message.isalnum() == True:
+        message = morse_code(message)
+
+    for i in range(len(message)):
+        print(message[i], end=" ")
+    print("")
+
+
+def morse_code(message):
+    alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'X', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+    morse_letters = ['•-', '-•••', '-•-•', '-••', '•', '••-•', '--•', '••••', '••', '•---', '-•-', '•-••', '--','-•', '---', '•--•', '--•-', '•-•', '•••', '-', '••-', '•••-', '•--','-••-', '-•--', '--••', '•----', '••---', '•••---', '••••-', '•••••', '-••••', '--•••','---••', '----•', '-----']
+    
+    morse = []
+
+    for i in range(len(message)):
+        for j in range(len(alphabet)):
+            if message[i] == alphabet[j]:
+                morse.append(morse_letters[j])
+
+    return morse
+
+
+
         
