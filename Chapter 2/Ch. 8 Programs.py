@@ -80,5 +80,31 @@ def morse_code():
         numbers = ['•----', '••---', '•••---', '••••-', '•••••', '-••••', '--•••',
                    '---••', '----•', '-----']
         
-        
+def phone_number():
+    
+    message = input("Enter a telephone number in the form of XX-XXX-XXXX: ").strip('-').upper()
+    
+    if message.isalnum() == True:
+        message = phone_number(message)
+
+    for i in range(len(message)):
+        print(message[i], end=" ")
+    print("")
+
+
+def morse_code(message):
+    alphabet = ['A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+    phone_letters = ['2', '2', '2', '3', '3', '3', '4', '4', '4', '5', '5', '5', '6', '6', '6', '7', '7', '7', '7', '8', '8', '8', '9', '9', '9', '9']
+    
+    phone_number = []
+
+    for i in range(len(message)):
+        for j in range(len(alphabet)):
+            if message[i] == alphabet[j]:
+                phone_numbers.append(phone_letters[j])
+
+    return morse
+
+def 
         
