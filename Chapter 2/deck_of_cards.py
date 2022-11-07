@@ -8,6 +8,8 @@ def card_dealer_main(): #Program 9-1
     #and takes input from the user for the number of cards to deal
     #it then calls deal_cards to deal the number of cards to the user
     
+    deck = create_deck(number)
+    
     number = int(input("How many cards do you wish to deal? "))
     
     create_deck(number)
