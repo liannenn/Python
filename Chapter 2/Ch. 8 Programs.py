@@ -128,15 +128,37 @@ def avg_num_words():
         
         complete_file.append(line)
         
-def igpay_atinlay():
+def gas_prices():
     
-    convert = input("Enter a message to convert to pig Latin: ")
+    counter = 0
     
-    for word in convert:
-        
+    total = 0
     
+    infile = open('GasPrices.txt', 'r')
+    
+    file = []
+    
+    for line in file:
+        
+        counter+=1
+        
+        line = infile.readline()
+    
+        file.append(line)
+    
+        gas_split = file.split('-')
+        
+        gas_split2 = gas_split.split(':')
+        
+        year = gas_split2(3)
+        
+        price = gas_split2(4)
+        
+        total+=price
+        
+        avg = total/counter
+        
+    print("The average price in ", year, "was", price)
         
         
-        
-    print(file)
      
