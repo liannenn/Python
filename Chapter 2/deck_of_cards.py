@@ -8,7 +8,6 @@ def card_dealer_main(): #Program 9-1
     #and takes input from the user for the number of cards to deal
     #it then calls deal_cards to deal the number of cards to the user
     
-    deck = create_deck(number)
     
     number = int(input("How many cards do you wish to deal? "))
     
@@ -64,29 +63,31 @@ def deal_cards(deck_dictionary, number):
     #and acculmulating the key value of that card
     #to get the total of the hand.
     
+    deck = ''
     
-   print("Here is your hand:\n")
+    print("Here is your hand:\n")
     
-   counter = 0
-   while counter <= numbers:
+    counter = 0
+    while counter <= number:
     
         counter +=1
     
-        card = random.choice(list(deck))
+        card = random.choice(list(deck_dictionary))
         
         print(card)
         
-        deck.append(card)
+        deck+=card
         
         value = deck_dictionary.pop(card)
         
         true_value = 0
         
+        
     
-    for key, value in deck.items():
+    for key, value in deck_dictionary.items:
         
         true_value = true_value + value
-    
+        
     
     print("Your hand has has the value: ", value)
     

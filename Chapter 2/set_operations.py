@@ -45,4 +45,4 @@ def set_operations():
     
     
     print("The following students play one sport, but not both: ")
-    o
+    
