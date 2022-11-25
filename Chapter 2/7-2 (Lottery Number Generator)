@@ -1,0 +1,21 @@
+import random
+
+def lottery():
+    #lottery accepts no arguments
+    #it prints Generating lotto numbers.
+    #it saves the numbers and prints them
+    
+    lotto_numb1= random.randint(1,9)
+    lotto_numb2= random.randint(1,9)
+    lotto_numb3= random.randint(1,9)
+    lotto_numb4= random.randint(1,9)
+    lotto_numb5= random.randint(1,9)
+    lotto_numb6= random.randint(1,9)
+    lotto_numb7= random.randint(1,9)
+    
+    print("Generating lotto numbers. \n")
+    
+
+    print("Youre lotto numbers are:")
+    print('\n', lotto_numb1, '\n', lotto_numb2, '\n', lotto_numb3, '\n',lotto_numb4,'\n', lotto_numb5,'\n', lotto_numb6,'\n', lotto_numb7)
+    
