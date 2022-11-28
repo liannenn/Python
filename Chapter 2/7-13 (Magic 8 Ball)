@@ -1,0 +1,55 @@
+import random
+
+def main():
+    
+    ans1 = "Yes, of course!"
+    ans2 = "Without a doubt, yes."
+    ans3 = "You can count on it."
+    ans4 = "For sure!"
+    ans5 = "Ask me later."
+    ans6 = "I’m not sure."
+    ans7 = "I can’t tell you right now."
+    ans8 = "I’ll tell you after my nap."
+    ans9 = "No way!"
+    ans10 = "I don’t think so."
+    ans11 = "Without a doubt, no."
+    ans12 = "The answer is clearly NO."
+    
+    answer = input("What is your question?")
+    response = random.randint(1,12)
+    
+    if response == 1:
+        print(ans1)
+        
+    if response == 2:
+        print(ans2)
+        
+    if response == 3:
+        print(ans3)
+        
+    if response == 4:
+        print(ans4)
+        
+    if response == 5:
+        print(ans5)
+
+    if response == 6:
+        print(ans6)
+
+    if response == 7:
+        print(ans7)
+
+    if response == 8:
+        print(ans8)
+
+    if response == 9:
+        print(ans9)
+
+    if response == 10:
+        print(ans10)
+
+    if response == 11:
+        print(ans11)
+
+    if response == 12:
+        print(ans12)

@@ -1,0 +1,23 @@
+def main():
+    try:
+        found = False
+        infile = open("charge_accounts.txt", 'r')
+        charge_account = infile.readlines()
+        index =0
+
+        while index <= len(charge_account):
+            charge_account[index] = int(charge_account[index])
+            index =+1
+
+        infile.close()
+        search = int(input("Enter the account number to search: "))
+
+        for account in charge_account:
+            if account == search:
+                found = True
+            if found:
+                print(search, "is a valid account number.")
+            else:
+                print(search, "is an invalid account number.")
+    except:
+        main()
