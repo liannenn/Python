@@ -1,0 +1,17 @@
+import matplotlib.pyplot
+
+def pie_chart():
+    rent = int(input('Enter the expenses of the rent for the last month: '))
+    gas = int(input('Enter the expenses of the gas for the last month: '))
+    car = int(input('Enter the expenses of your car for the last month: '))
+    clothing = int(input('Enter the expenses of clothing for the last month: '))
+    food = int(input('Enter the expenses of food for the last month: '))
+    etc = int(input('Enter the expenses of everything else: '))
+    
+    expenses = [rent, gas, food, clothing, car, etc]
+    slice_labels = ['Rent', 'Gas', 'Food', 'Clothing', 'Car', 'Etc']
+    plt.pie(expenses, labels=slice_labels)
+    
+    plt.title('Monthly Expenses')
+    
+    plt.show()
