@@ -5,28 +5,28 @@ class RetailItem:
         self.__units = units
         self.__cost = cost
     
-    def set_itemname();
+    def set_itemname(self, itemname):
         self.__itemname = itemname
     
-    def set_description():
+    def set_description(self, description):
         self.__description = description
                              
-    def set_units():
+    def set_units(self, units):
         self.__units = units
         
-    def set_cost():
+    def set_cost(self, cost):
         self.__cost = cost
         
-    def get_itemname();
+    def get_itemname(self itemname):
         return self.__itemname 
    
-    def get_description():
+    def get_description(self, description):
         return self.__description
      
-    def get_units():
+    def get_units(self, units):
         return self.__units
         
-    def get_cost():
+    def get_cost(self, cost):
         return self.__cost
     
     def __str__(self):

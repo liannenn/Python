@@ -9,7 +9,7 @@ class BankAccount: #Program 10-7
             
      #the deposit method makes a deposit into the account
             
-    def depoist(self, account):
+    def deposit(self, amount):
         self.__balance += amount
             
       #the withdraw method makes a withdrawal from the account
@@ -24,4 +24,4 @@ class BankAccount: #Program 10-7
         return self.__balance
     
     def __str__(self):
-        reutrn 'The balance is $' + format(self.__balance, ',.2f')
+        return 'The balance is $' + format(self.__balance, ',.2f')
