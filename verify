@@ -1,0 +1,135 @@
+def verifyInt(message):
+    valid = False
+    while valid == False:
+        try:
+            total = int(input(message))
+            valid = True
+        except ValueError:
+            print("Try again.")
+    return total
+def verifyIntMax(message, maximum):
+    valid = False
+    while valid == False:
+        try:
+            check = False
+            while check == False:
+                total = int(input(message))
+                if total <= maximum:
+                    check = True
+                else: 
+                    print("Try again")
+            valid = True
+            return total
+        except ValueError:
+            print("Try again.")
+def verifyIntMin(message, minimum):
+    valid = False
+    while valid == False:
+        try:
+            check = False
+            while check == False:
+                total = int(input(message))
+                if total >= minimum:
+                    check = True
+                else: 
+                    print("Try again")
+            valid = True
+            return total
+        except ValueError:
+            print("Try again.")
+
+def verifyIntRange(message, minimum, maximum):
+    valid = False
+    while valid == False:
+        try:
+            check = False
+            while check == False:
+                total = int(input(message))
+                if total >= minimum and total <= maximum:
+                    check = True
+                else: 
+                    print("Try again")
+            return total
+        except ValueError:
+            print("Try again.")
+
+def verifyList(message, acceptable):
+    check = False
+    while check == False:
+        output = input(message)
+        if output in acceptable == True:
+            check = True
+            return output
+        else:
+            print("Try again") 
+
+def quit():
+    check = False
+    while check == False:
+        again = input("Continue? (Y/N) ")
+        if again == "Yes" or again == "Y":
+            check = True
+            check2 = False
+            print("Next up...")
+        elif again == "No" or again == "N":
+            check = True
+            check2 = True
+            print("Goodbye!")
+        else:
+            print("Try again.")
+    return check2
+
+def verifyFloat(message):
+    valid = False
+    while valid == False:
+        try:
+            total = float(input(message))
+            valid = True
+        except ValueError:
+            print("Try again.")
+    return total
+def verifyFloatMax(message, maximum):
+    valid = False
+    while valid == False:
+        try:
+            check = False
+            while check == False:
+                total = float(input(message))
+                if total <= maximum:
+                    check = True
+                else: 
+                    print("Try again")
+            valid = True
+            return total
+        except ValueError:
+            print("Try again.")
+def verifyFloatMin(message, minimum):
+    valid = False
+    while valid == False:
+        try:
+            check = False
+            while check == False:
+                total = float(input(message))
+                if total >= minimum:
+                    check = True
+                else: 
+                    print("Try again")
+            valid = True
+            return total
+        except ValueError:
+            print("Try again.")
+
+def verifyFloatRange(message, minimum, maximum):
+    valid = False
+    while valid == False:
+        try:
+            check = False
+            while check == False:
+                total = float(input(message))
+                if total >= minimum and total <= maximum:
+                    check = True
+                else: 
+                    print("Try again")
+            return total
+        except ValueError:
+            print("Try again.")
