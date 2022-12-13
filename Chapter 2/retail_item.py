@@ -1,11 +1,11 @@
 class RetailItem:
-    def _init__(self, description, units, cost)
+    def _init__(self, itemname, description, units, cost)
         self.__itemname = itemname
         self.__description = description
         self.__units = units
         self.__cost = cost
     
-    def set_itemname();
+    def set_itemname():
         self.__itemname = itemname
     
     def set_description():
