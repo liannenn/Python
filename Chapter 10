@@ -1,39 +1,41 @@
 class RetailItem:
-    def _init__(self, itemname, description, units, cost)
+    def __init__(self, itemname, description, units, cost):
+        
         self.__itemname = itemname
         self.__description = description
         self.__units = units
         self.__cost = cost
     
-<<<<<<< HEAD
-    def set_itemname(self, itemname):
-=======
     def set_itemname():
->>>>>>> fc8f360ad15486406a88677955be4c1949f125a9
         self.__itemname = itemname
     
-    def set_description(self, description):
+    def set_description():
         self.__description = description
                              
-    def set_units(self, units):
+    def set_units():
         self.__units = units
         
-    def set_cost(self, cost):
+    def set_cost():
         self.__cost = cost
         
-    def get_itemname(self itemname):
+    def get_itemname():
         return self.__itemname 
    
-    def get_description(self, description):
+    def get_description():
         return self.__description
      
-    def get_units(self, units):
+    def get_units():
         return self.__units
         
-    def get_cost(self, cost):
+    def get_cost():
         return self.__cost
     
     def __str__(self):
-        return "Description: " + self.__name + \
+        return "Item Name: " + self.__itemname + \
+               "Description: " + self.__description + \
                "\nUnits: " + self.__phone + \
                "\nCost: " + self.__email
+    
+    def save_inv(purchase_list):
+        outfile = open("Saved_Inventory.txt", 'w')
+        outfile.write(purchase_list)

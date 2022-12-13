@@ -1,0 +1,29 @@
+import random
+dice = "D"
+
+def dice_roller():
+    #dice_roller gives the option of a d20, d6, etc
+    #it rolls the die given and displays the value rolled
+    try:
+    
+        dice_type = input("What type of dice would you like to roll? \nExamples: D20, D6, D8, D4, etc ")
+        
+        dice_type_upper = dice_type.upper()
+        
+        sides = dice_type_upper.strip('D')
+        
+        str_sides = int(sides)
+        value_rolled = random.randint(1, str_sides)
+        
+        print(value_rolled)
+        
+        redo = input("Would you like to roll again?")
+        
+        if redo == 'y':
+            dice_roller()
+        else:
+            print("Thanks for using dice roller, goodbye!")
+        
+    except:
+        print("\nPlease insert a valid input\n")
+        dice_roller()
