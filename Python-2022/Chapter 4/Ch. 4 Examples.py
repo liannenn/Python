@@ -194,7 +194,7 @@ def gross_pay():
     
     pay_rate = int(input("Enter the hourly rate: ")) # get pay rate
     
-    gross_pay = hours * pay_rate
+    gross_oay = hours * pay_rate
     
     #output gross play
     print("Gross pay: $", format(gross_pay, '.2f'), sep= '')
@@ -214,7 +214,7 @@ def retail_no_validation(): # Prgram 4-15
         wholesale = float(input("Enter the wholesale cost: "))
         
         #calculate retail price
-        retail - wholesale * MARK_UP
+        retail - wholesale * MARK_Up
         
         #output the retail price
         print("Retail price: $", format(retail, ',.2f'), sep='')
@@ -269,106 +269,3 @@ def test_score_averages():
         avg = total/test_per
         print("The average for student number", student, "is", format(avg_tests, '.2f'))
         print()
-
-def rectangle_pattern():
-    rows = int(input("Enter the number of rows to print: "))
-    columns = int(input("Enter the number of columns to print: "))
-    print()
-    
-    for row in range(rows):
-        
-        for column in range(columns):
-            print("*", end='')
-    print()
-
-def triangle_pattern():
-    
-    base = int(input("Enter the base size of the triangle: "))
-    
-    for row in range(1, base + 1):
-        for column in range(row):
-            print("*", end='')
-        print()
-        
-def new_range_example():
-    
-    for num1 in range(1,6):
-        print('*')
-        for num2 in range(num1):
-            print("&")
-            for num3 in range(num2):
-                print("@")
-                
-def stair_pattern():
-        
-    steps = int(input("Enter the number of stairs: "))
-    
-    for stairs in range(1, steps + 1):
-        for column in range(stairs):
-            print(" ", end='')
-        print("@")
-        
-def turtle_square():
-    for x in range(4):
-        turtle.forward(120)
-        turtle.right(90)
-        
-def turtle_octagon():
-    for x in range(8):
-        turtle.forward(100)
-        turtle.right(45)
-        
-def concentric_circles():
-    num_circles = int(input("Enter the number of circles: "))
-    STARTING_RADIUS = 20
-    OFFSET = 10
-    ANIMATION_SPEED = 0
-    
-    turtle.speed(ANIMATION_SPEED)
-    
-    radius = STARTING_RADIUS
-    
-    for circle in range(num_circles):
-        turtle.circle(radius)
-
-    xcor = turtle.xcor()
-    ycor = turtle.ycor()
-
-    turtle.ycor(OFFSET)
-    radius = radius + OFFSET
-    
-    turtle.penup()
-    turtle.goto(xcor, ycor)
-    turtle.pendown()
-    
-def spiral_circles():
-    
-    NUM_CIRCLES = 36 #number of circles to draw
-    RADIUS = 100 #radius of each circle
-    ANGLE = 10 #angle to turn
-    ANIMATION_SPEED = 0
-    
-    turtle.speed(ANIMATION_SPEED)
-    turtle.color("blue")
-    
-    for x in range(NUM_CIRCLES):
-        turtle.circle(RADIUS)
-        turtle.left(ANGLE)
-        
-def starburst():
-    START_X = -200
-    START_Y = 0
-    NUM_LINES = 36
-    LINE_LENGTH = 400
-    ANGLE = 170
-    
-    turtle.penup()
-    turtle.goto(START_X, START_Y)
-    turtle.pendown()
-    
-    for ee in range(NUM_LINES):
-        turtle.forward(LINE_LENGTH)
-        turtle.left(ANGLE)
-    
-   
-    
