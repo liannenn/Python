@@ -1,88 +1,41 @@
-import retail_item
-import cash_register
-
-SHOW = 1
-PURCHASE = 2
-CART = 3
-TOTAL = 4
-EMPTY = 5
-QUIT = 6
-
-def main():
-    mylist = make_list()
-    mycashregister = cash_register.CashRegister(mylist)
-
-    choice = 0
-
-    # Process menu selections until user quits program.
-    while choice != QUIT:
-        # Get the user's menu choice.
-        choice = get_menu_choice()
-        # Proces the choice.
-        if choice == SHOW:
-            __str__(item)
-        elif choice == PURCHASE:
-            purchase()
-        elif choice == CART:
-            cart(mycashregister)
-        elif choice == TOTAL:
-            total(mycashregister)
-        elif choice == EMPTY:
-            empty(mycashregister)
-
-def make_list():
-    item_list = []
-
-    item = 'Jacket'
-    units = 12
-    price = 59.95
-    entry = retail_item.RetailItem(item, units, price)
-    item_list.append(entry)
-
-    item = 'Jeans'
-    units = 40
-    price = 34.95
-    entry = retail_item.RetailItem(item, units, price)
-    item_list.append(entry)
-
-    item = 'Shirt'
-    units = 20
-    price = 24.95
-    entry = retail_item.RetailItem(item, units, price)
-    item_list.append(entry)
-
-    return item_list
-
-# The get_menu_choice function displays the menu and gets
-#   a validated choice from the user.
-def get_menu_choice():
-    print()
-    print('CASH REGISTER MENU')
-    print('-------------------------')
-    print('1. Show Retial Items')
-    print('2. Purchase an Item(s)')
-    print('3. Show Current Shopping Cart')
-    print('4. Show Total of Items Purchased')
-    print('5. Empty Your Shopping Cart')
-    print('6. Quit the program')
-    print()
-
-    # Get the user's choice.
-    choice = int(input('Enter your choice: '))
-
-    # Validate the choice.
-    while choice < SHOW or choice > QUIT:
-        choice = int(input('Enter a valid choice: '))
-
-    # Return the user's choice.
-    return choice
-
-def display_list(item_list):
-    for item in item_list:
-        print('Item Description:', item.get_item(), \
-              '\tNumber of Units:', item.get_units(), \
-              '\tPrice:', item.get_price())
-    print()
-
-def purchase():
-    item_purchase = input('Enter the item you wish to purchase: ')
+class RetailItem:
+    def __init__(self, itemname, description, units, cost):
+        
+        self.__itemname = itemname
+        self.__description = description
+        self.__units = units
+        self.__cost = cost
+    
+    def set_itemname():
+        self.__itemname = itemname
+    
+    def set_description():
+        self.__description = description
+                             
+    def set_units():
+        self.__units = units
+        
+    def set_cost():
+        self.__cost = cost
+        
+    def get_itemname():
+        return self.__itemname 
+   
+    def get_description():
+        return self.__description
+     
+    def get_units():
+        return self.__units
+        
+    def get_cost():
+        return self.__cost
+    
+    def __str__(self):
+        return "Item Name: " + self.__itemname + \
+               "Description: " + self.__description + \
+               "\nUnits: " + self.__phone + \
+               "\nCost: " + self.__email
+    
+    def save_inv(purchase_list):
+        outfile = open("Saved_Inventory.txt", 'w')
+        outfile.write(purchase_list)
