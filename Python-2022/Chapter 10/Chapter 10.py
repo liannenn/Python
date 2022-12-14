@@ -1,19 +1,20 @@
 import verify as ver
 
 class RetailItem:
-        def __init__(self, description, stock, price):
+
+        def __init__(self, desc, stock, moneyz):
         #retail item
-        #has description, stock, price
-        self.description = description
+        #has desc, stock, moneyz
+        self.desc = desc
         self.stock = stock
-        self.price = price
+        self.moneyz = moneyz
 
         
     def __list__(self):
-        return [{self.description}, {self.stock}, {self.price}]
+        return [{self.desc}, {self.stock}, {self.moneyz}]
     
     def __str__(self):
-        return f"{self.description}:{self.stock}:{self.price}"
+        return f"{self.desc}:{self.stock}:{self.moneyz}"
 
 class CashRegister:
 
@@ -31,7 +32,7 @@ class CashRegister:
     def get_total(self):
         total = 0.0
         for item in self.__items:
-            total = total + item.get_price()
+            total = total + item.get_moneyz()
             return total
 
     def show_cart(self):
@@ -89,12 +90,12 @@ def inventory(inventoryList):
             stop = True
 
 def addInventory(inventoryList):
-    discription = input("Input item description: ")
+    disc = input("Input item desc: ")
     stock = ver.verifyIntMin("Input amount in stock: ", 1)
-    price = ver.verifyFloatMin("Input item price: ", .01)
+    moneyz = ver.verifyFloatMin("Input item moneyz: ", .01)
     
 
-    item = RetailItem(discription, stock, price)
+    item = RetailItem(disc, stock, moneyz)
     itemString = item.__str__()
 
     inventoryList.append(itemString)
@@ -121,12 +122,12 @@ def retailMenu(inventoryList):
             cart.clear()
             print("Your cart is now empty!")
         elif menuChoice == 4:
-            priceCalculator(cart)
+            moneyzCalculator(cart)
             stop = True
     
 def shop(inventoryList, cart):
     itemStock = dict({})
-    itemPrices = dict({})
+    itemmoneyzs = dict({})
     items = list([])
     stop = False
     while stop == False:
@@ -146,19 +147,19 @@ def shop(inventoryList, cart):
             listed = selection.split(":")
             itemName = listed[0]
             itemStock[itemName]  = int(listed[1])
-            itemPrices[itemName] = float(listed[2])
+            itemmoneyzs[itemName] = float(listed[2])
             items.append(itemName)
-            print(itemName, " has ", itemStock[itemName], " units in stock, and each unit costs $", format(itemPrices[itemName], ".2f"), sep = "")
+            print(itemName, " has ", itemStock[itemName], " units in stock, and each unit costs $", format(itemmoneyzs[itemName], ".2f"), sep = "")
         
         
         userChoice = input("Which of these items would you like to purchase? ")
         if userChoice in items:
             
             quantity = ver.verifyIntRange("How many would you like? ", 1, itemStock[userChoice])
-            price = quantity*itemPrices[userChoice]
-            searchQue = userChoice + ":" + str(itemStock[userChoice]) + ":" + str(itemPrices[userChoice])
+            moneyz = quantity*itemmoneyzs[userChoice]
+            searchQue = userChoice + ":" + str(itemStock[userChoice]) + ":" + str(itemmoneyzs[userChoice])
             originalItem = inventoryList.index(searchQue)
-            text = userChoice+":"+str(quantity)+":" + str(price)
+            text = userChoice+":"+str(quantity)+":" + str(moneyz)
             cart.append(text)
             itemStock[userChoice] = itemStock[userChoice] - quantity
         if itemStock[userChoice] == 0:
@@ -175,14 +176,14 @@ def shop(inventoryList, cart):
     print(cart)
     return cart
 
-def priceCalculator(cart):
-    totalPrice = 0
+def moneyzCalculator(cart):
+    totalmoneyz = 0
     while len(cart) > 0:
         item = cart.pop(0)
         data = item.split(":")
-        itemPrice = int(data[1])*float(data[2])
-        totalPrice += itemPrice
-    print("The total price is: $", totalPrice, sep = "")
+        itemmoneyz = int(data[1])*float(data[2])
+        totalmoneyz += itemmoneyz
+    print("The total moneyz is: $", totalmoneyz, sep = "")
     
 def passwordCheck(password):
      if password == #put your own custom password here as a string:
